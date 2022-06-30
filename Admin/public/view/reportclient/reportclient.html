@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>PANEL</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="view/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/css/emoji.css" rel="stylesheet">
+  
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <div id="Loading" style="display: none;position: absolute;top: 0%;left: 0%; width: 100%;height: 100em;background-color:rgba(1, 28, 60, 0.2);z-index:1001;opacity:0.9">
+      <div class="sk-folding-cube" style="position: fixed; left: 50%; top: 45%; z-index: 9999999999;display:block;opacity:1!important">
+        <div class="sk-cube1 sk-cube"></div>
+        <div class="sk-cube2 sk-cube"></div>
+        <div class="sk-cube4 sk-cube"></div>
+        <div class="sk-cube3 sk-cube"></div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background-color: #e3f2fd;" aria-label="Main navigation">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../dashboard/dashboard.html">PANEL</a>
+    <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="operadores" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse operadores-collapse" id="">
+      <ul id="menuaccess" class="navbar-nav me-auto mb-2 mb-lg-0">
+
+      </ul>
+  
+        <ul class="nav navbar-nav navbar-right" style=" position: relative;left: 56%;">
+          <li class="dropdown">
+            <div style="display: flex;">
+              <h5 class="row" id="totalmoneyconvertB"></h5>
+               <a href="#" style=" margin-right: 10px; margin-left: 50px;" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                   <i class="fas fa-user"></i>
+                   <strong id="userEmailsession"></strong>
+               </a>
+               <ul style="left:43%;" class="dropdown-menu">
+                   <li>
+                       <div class="navbar-login navbar-login-session">
+                           <div class="row">
+                               <div class="col-lg-12">
+                                 <br>
+                                   <p>
+                                       <a onclick="signOut()" href="#" class="btn btn-danger btn-block col-12 p-2">Cerrar Sesion</a>
+                                   </p>
+                               </div>
+                           </div>
+                       </div>
+                   </li>
+               </ul>
+              </div>
+           </li>
+        </ul>
+      </div>
+  </div>
+</nav>
+    <br>
+    <main class="container" style="margin-top: 5vh;">
+
+
+    
+    
+      <!-- Modal carousel user  -->
+    <div class="modal fade bg-transparent" id="viewprofileModal"  data-view="chat" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog bg-transparent">
+      <div class="modal-content bg-transparent">
+        <div class="w-full max-w-sm mx-auto overflow-hidden  rounded-lg shadow-lg dark:bg-gray-800">
+          <div style="background: rgb(138 48 46 / 81%);" id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner w-full h-72" id="imagen">
+      
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+      
+          <div class="flex items-center px-2 py-1 bg-gray-900">
+            <h1 id="CMUsername" class="mx-3 text-lg font-semibold text-white"></h1>
+        </div>
+          <div class="px-1 py-4 bg-white" style="opacity: 0.85;">
+              <div class="flex items-center justify-between px-3 py-2 ">
+      
+                <div>
+                  <button style="float: right;" class="btn  btn-outline-secondary"   id="CMbtnChat"><i class="far fa-envelope"></i> Chat</button>
+                  <button id="CMbtnheart" type="button" class="btn btn-outline-danger"><i class="fas fa-heart"></i></button>
+                </div>
+                <div class="dropdown">
+                  <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    
+                    <li id="CMblock"></li>
+                    <li><a id="CMreport" class="dropdown-item" href="#"><i class="fas fa-flag"></i>&nbsp;Report</a></li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="flex items-center justify-between px-3 py-2 dark:bg-gray-700">
+                  <div class="col">
+                    <span class="row " style="width: 60%;" id="CMCountry"></span>
+                    <span class="row" style="width: 60%;" id="CMLanguange"></span>
+                  </div>
+      
+              </div>
+              <br>
+              <p>
+                &nbsp;&nbsp;<a id="btnhidemoreinfo" onclick="hidemoreinfo()" data-bs-toggle="collapse" href="#" role="button">
+                  Más información
+                </a>
+              </p>
+              <div class="collapse" id="moreinfo">
+                <div class="card card-body" style="padding: 0rem 1rem!important">
+                  <p class="card-text">
+                    </p><div class="max-w-4xl  bg-white w-full rounded-lg shadow-xl">
+                      <div>
+                          <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 px-4 py-1 border-b">
+                              <b class="text-gray-600">
+                                  Nombre
+                              </b>
+                              <p id="NameshowtextV">
+      
+                              </p>
+                          </div>
+                          <div class="md:grid md:grid-cols-1 hover:bg-gray-50 md:space-y-0 space-y-1 px-4 py-1 border-b">
+                              <div class="row">
+                                <i class="fas fa-globe-europe"></i>
+                                <span class="col">
+                                  <b>Comunidad</b>
+                                  <p id="RegionshowtextV"></p>
+                                </span>
+                                <span class="col">
+                                  <b>Municipio</b>
+                                  <p id="CityshowtextV"></p>
+                                </span>
+                              </div>
+                          </div>
+                          <div class="md:grid md:grid-cols-1 hover:bg-gray-50 md:space-y-0 space-y-1 px-4 py-1 border-b">
+                            <div class="row">
+                              <i class="fas fa-child"></i>
+                              <span class="col">
+                                <b>Tipo del cuerpo</b>
+                                <p id="BodytypeshowtextV"></p>
+                              </span>
+                              <span class="col">
+                                <b>Color de los ojos</b>
+                                <p id="EyecolorshowtextV"></p>
+                              </span>
+                            </div>
+                            <div class="row">
+                              <span class="col">
+                                <b>Altura</b>
+                                <p id="HeightshowtextV"></p>
+                              </span>
+                              <span class="col">
+                                <b>Peso</b>
+                                <p id="WeightshowtextV"></p>
+                              </span>
+                            </div>
+                            <div class="row">
+                      
+                            </div>
+                          </div>
+                          <div class="md:grid md:grid-cols-1 hover:bg-gray-50 md:space-y-0 space-y-1 px-4 py-1 border-b">
+                            <div class="row">
+                              <i class="fas fa-eye"></i>
+                              <span class="col">
+                                <b>Buscando</b>
+                                <p id="SeekingshowtextV"></p>
+                              </span>
+                              <span class="col">
+                                <b>Sexo</b>
+                                <p id="GendershowtextV"></p>
+                              </span>
+                              <span class="col">
+                                <b>Fumador/a</b>
+                                <p id="SmokershowtextV"></p>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="md:grid md:grid-cols-1 hover:bg-gray-50 md:space-y-0 space-y-1 px-4 py-1 border-b">
+                              <b class="text-gray-600">
+                                Descripción:
+                              </b>
+                              <p id="DescribeshowtextV">
+                                   
+                              </p>
+                          </div>
+      
+                      </div>
+         
+                  </div>
+                  <div class="mt-1" id="labeltags">
+      
+                  </div>
+                  <p></p>
+                </div>
+              </div>
+          </div>
+        </div>
+    
+    
+      </div>
+    </div>
+    </div>
+      <div class="row">
+    
+        <div class="col-sm-3 col-md-3 bg-white" style="padding: 0px!important;">
+            <div class="max-w-md mx-auto bg-gray-100 shadow-lg rounded-lg overflow-hidden md:max-w-lg">
+                <div class="md:flex" style="overflow-y: scroll;">
+                    <div style="height: 86vh;" class="w-full">
+                        <!--<div class="relative"> <input type="text" class="w-full h-12 rounded focus:outline-none px-3 focus:shadow-md" placeholder="Search..."> <i class="fa fa-search absolute right-3 top-4 text-gray-300"></i> </div>-->
+                        <ul id="Idfriendlist" style="padding-left: 0px!important;"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <!--=========================================================-->
+          <!-- selected chat -->
+        <div class="col-sm-6 col-md-6" style="padding: 0px!important;">
+            <ul class="friend-list" style="margin-bottom: 0px!important">
+              <li class="active bounceInDown">
+                <a href="#" class="clearfix">
+                  <div class="friend-name">
+                    <strong class="p-2" id="usertargename"></strong>
+                  </div>
+                  <small id="usertargestatus" class="time text-muted"></small>
+                </a>
+              </li>
+          </ul>   
+              <div class="chat-message glassbasic" style="background: rgb(138 48 46 / 81%);">
+                  <ul id="idchat" class="chat">
+    
+                  </ul>
+                  <div id="imgpreviewsendcard" style="display: none;" class="max-w-xs mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 relative">
+                    <img id="imgpreviewsend" class="object-contain w-full h-60" src="https://cdn.imagecomics.com/assets/img/default-user-square.svg" alt="avatar">
+                    <div class="py-5 text-center">
+                      <button onclick="cargarimagencancel()" class="px-4 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-danger rounded-md dark:bg-gray-800 hover:bg-blue-500 dark:hover:bg-gray-700 focus:outline-none focus:bg-blue-500 dark:focus:bg-gray-700">
+                        Cancel
+                    </button>
+                    <button onclick="sendimgmessage()" class="px-4 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-success rounded-md dark:bg-gray-800 hover:bg-blue-500 dark:hover:bg-gray-700 focus:outline-none focus:bg-blue-500 dark:focus:bg-gray-700">
+                      Send
+                    </button>
+                    </div>
+                </div>
+              </div>
+              <div class="chat-box glassbasic">
+                <div class="input-group">
+                  <input data-emojiable="true" data-emoji-input="unicode" id="textmessage" class="form-control border no-shadow no-rounded">
+    
+                  <span class="input-group-btn">
+                    <a href="#" style="margin-bottom: 1vh" id="sendmessagebtn" class="btn btn-success no-rounded" type="button"><i class="fas fa-paper-plane"></i></a>
+                  </span>
+                </div><!-- /input-group -->
+              </div>
+        </div>
+        <div id="userinfodisplay" class="col-sm-3 col-md-3 bg-white" style="padding: 0px!important;">
+    
+    
+    
+        </div>
+    </div>
+
+      <script src="../../scripts/jquery.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="../../scripts/const_functions.js"></script>
+      <script src="../../scripts/firebaseconfig.js"></script>
+      <script src="../../scripts/model/Messager.js"></script>
+      <script src="reportclient.js"></script>
+    </main>
+
+
+  </body>
+</html>
+
+ 
+   
+

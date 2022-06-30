@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>PANEL</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/offcanvas/">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="stats.css" rel="stylesheet">
+    <link href="../../css/mainstyles.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <div id="Loading" style="display: none;position: absolute;top: 0%;left: 0%; width: 100%;height: 100em;background-color:rgba(1, 28, 60, 0.2);z-index:1001;opacity:0.9">
+      <div class="sk-folding-cube" style="position: fixed; left: 50%; top: 45%; z-index: 9999999999;display:block;opacity:1!important">
+        <div class="sk-cube1 sk-cube"></div>
+        <div class="sk-cube2 sk-cube"></div>
+        <div class="sk-cube4 sk-cube"></div>
+        <div class="sk-cube3 sk-cube"></div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background-color: #e3f2fd;" aria-label="Main navigation">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../dashboard/dashboard.html">PANEL</a>
+          <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="operadores" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="navbar-collapse operadores-collapse" id="">
+            <ul id="menuaccess" class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            </ul>
+      
+            <ul class="nav navbar-nav navbar-right">
+             <li class="dropdown">
+              <div style="display: flex;">
+                <h5 class="row" id="totalmoneyconvertB"></h5>
+                 <a href="#" style=" margin-right: 10px; margin-left: 50px;" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                     <i class="fas fa-user"></i>
+                     <strong id="userEmailsession"></strong>
+                 </a>
+                 <ul style="left:43%;" class="dropdown-menu">
+                     <li>
+                         <div class="navbar-login navbar-login-session">
+                             <div class="row">
+                                 <div class="col-lg-12">
+                                   <br>
+                                     <p>
+                                         <a onclick="signOut()" href="#" class="btn btn-danger btn-block col-12 p-2">Cerrar Sesion</a>
+                                     </p>
+                                 </div>
+                             </div>
+                         </div>
+                     </li>
+                 </ul>
+                </div>
+             </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <br>
+    <br>
+    <br>
+    <main class="container">
+
+        <div class="card">
+            <h6 class="card-header">Message summary of the week</h5>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Messages<span id="MessageidN"></span></th>
+
+                        <th scope="col">0 - 300</th>
+
+                        <th scope="col">301 - 500</th>
+                   
+                        <th scope="col">501 - 700</th>
+             
+                        <th scope="col">701 - 900</th>
+                 
+                        <th scope="col">901 - 1100</th>
+                     
+                        <th scope="col">1101 - 1300</th>
+                    
+                        <th scope="col">1301 - 1500</th>
+                       
+                        <th scope="col">1501 - 1700</th>
+                     
+                        <th scope="col">1701 - +</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Euros €</td>
+                            <td id="8td">0.14</td>
+                        
+                            <td id="7td">0.18</td>
+                           
+                            <td id="6td">0.19</td>
+                       
+                            <td id="5td">0.20</td>
+                          
+                            <td id="4td">0.21</td>
+                          
+                            <td id="3td">0.22</td>
+              
+                            <td id="2td">0.23</td>
+
+                            <td id="1td">0.24</td>
+                            <td id="0td">0.25</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                  <span id="totalmoneyconvert">€ :</span>
+            </div>
+          </div>
+          <br>
+          <div id="checktablepoints"  class="card col-4" style="display: none;">
+            <h6 class="card-header">Message Check summary of the week</h5>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Messages Check<span id="CheckidN"></span></th>
+
+                        <th scope="col">0 - 1700</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Euros €</td>
+                            <td id="8tdc">0.10</td>
+                        
+                        </tr>
+                    </tbody>
+                  </table>
+                  <span id="totalmoneyconvertCheck">€ :</span>
+            </div>
+          </div>
+        <br>
+        <div class="card">
+          <h6 class="card-header">Message summary of the week</h5>
+          <div class="card-body">
+              <table class="table">
+                  <thead>
+                    <tr>
+  
+                      <th scope="col">ID</th>
+  
+                      <th scope="col">NAME</th>
+                 
+                      <th scope="col">Messages SEND</th>
+           
+                      <th scope="col">Messages CHECK</th>
+               
+                      <th scope="col">DATE</th>
+                   
+                      <th scope="col">TOTAL</th>
+  
+                    </tr>
+                  </thead>
+                  <tbody id="MessagesummaryWEEk">
+                    
+                  </tbody>
+                </table>
+          </div>
+        </div>
+    </main>
+    <script src="../../scripts/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../scripts/const_functions.js"></script>
+    <script src="../../scripts/firebaseconfig.js"></script>
+    <script src="stats.js"></script>
+  </body>
+</html>

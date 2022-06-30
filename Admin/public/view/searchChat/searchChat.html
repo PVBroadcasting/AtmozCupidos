@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>PANEL</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/offcanvas/">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/mainstyles.css" rel="stylesheet">
+    <link href="searchChat.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <div id="Loading" style="display: none;position: absolute;top: 0%;left: 0%; width: 100%;height: 100em;background-color:rgba(1, 28, 60, 0.2);z-index:1001;opacity:0.9">
+      <div class="sk-folding-cube" style="position: fixed; left: 50%; top: 45%; z-index: 9999999999;display:block;opacity:1!important">
+        <div class="sk-cube1 sk-cube"></div>
+        <div class="sk-cube2 sk-cube"></div>
+        <div class="sk-cube4 sk-cube"></div>
+        <div class="sk-cube3 sk-cube"></div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background-color: #e3f2fd;" aria-label="Main navigation">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../dashboard/dashboard.html">PANEL</a>
+    <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="operadores" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse operadores-collapse" id="">
+      <ul id="menuaccess" class="navbar-nav me-auto mb-2 mb-lg-0">
+
+      </ul>
+  
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <div style="display: flex;">
+              <h5 class="row" id="totalmoneyconvertB"></h5>
+               <a href="#" style=" margin-right: 10px; margin-left: 50px;" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                   <i class="fas fa-user"></i>
+                   <strong id="userEmailsession"></strong>
+               </a>
+               <ul style="left:43%;" class="dropdown-menu">
+                   <li>
+                       <div class="navbar-login navbar-login-session">
+                           <div class="row">
+                               <div class="col-lg-12">
+                                 <br>
+                                   <p>
+                                       <a onclick="signOut()" href="#" class="btn btn-danger btn-block col-12 p-2">Cerrar Sesion</a>
+                                   </p>
+                               </div>
+                           </div>
+                       </div>
+                   </li>
+               </ul>
+              </div>
+           </li>
+        </ul>
+      </div>
+  </div>
+</nav>
+    <br>
+    <main class="container" style="margin-top: 5vh;">
+      <div class="row">
+        <div  class="col-sm-3 col-md-3">
+          <div class="card">
+            <div class="card-body" >
+                <div class="input-group">
+                    <input  id="textidchat" class="form-control border no-shadow no-rounded" placeholder="ID Chat">
+                    <span class="input-group-btn">
+                      <button onclick="searchChat()" class="btn btn-success no-rounded" type="button"><i class="fas fa-search"></i></button>
+                    </span>
+                  </div><!-- /input-group -->
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="Nicknameshowtext">
+            </div>
+            <div class="card-body">
+              <div   id="img-preview"></div>
+              <div class="row">
+                <div id="img-previews0"></div>
+                <div id="img-previews1"></div>
+              </div>
+              <div class="row">
+                <div id="img-previews2"></div>
+                <div id="img-previews3"></div>
+              </div>
+              <div id="img-previews4"></div>
+              <div class="row">
+                <span class="col">
+                  <b>Name</b>
+                  <p id="Nameshowtext"></p>
+                </span>
+                <span class="col">
+                  <b>Age</b>
+                  <p id="Ageshowtext"></p>
+                </span>
+              </div>
+              <div class="row">
+                <span class="col">
+                  <b>Gender</b>
+                  <p id="Gendershowtext"></p>
+                </span>
+                <span class="col">
+                  <b>Seeking</b>
+                  <p id="Seekingshowtext"></p>
+                </span>
+              </div>
+              <div class="row">
+                <span class="col">
+                  <b>Hair color</b>
+                  <p id="Haircolorshowtext"></p>
+                </span>
+                <span class="col">
+                  <b>Eye color</b>
+                  <p id="Eyecolorshowtext"></p>
+                </span>
+              </div>
+              <div class="row">
+                <span class="col">
+                  <b>Body type</b>
+                  <p id="Bodytypeshowtext"></p>
+                </span>
+                <span class="col">
+                  <b>Height</b>
+                  <p id="Heightshowtext"></p>
+                </span>
+              </div>
+              <div class="row">
+                <span class="col">
+                  <b>Weight</b>
+                  <p id="Weightshowtext"></p>
+                </span>
+                <span class="col">
+                  <b>Smoker</b>
+                  <p id="Smokershowtext"></p>
+                </span>
+              </div>
+              <div class="row">
+                <span class="col">
+                  <b>Describe</b>
+                  <p id="Describe"></p>
+                </span>
+              </div>
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        FOR
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+      
+                        <label id="Affair" style="display:none;" class="form-check-label" for="flexCheckDefault">
+                          Affair
+                        </label>
+
+                
+                        <label id="Openrelationship" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Open relationship
+                        </label>
+                 
+                        <label id="Hangingout" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Hanging out
+                        </label>
+              
+                        <label id="Couplerelationship" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Couple relationship
+                        </label>
+               
+                        <label id="Onerightstands" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          One night stands
+                        </label>
+              
+                        <label id="Friendship" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Friendship
+                        </label>
+                  
+                        <label id="GymSports" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Gym/Sports
+                        </label>
+                
+                        <label id="ChatMails" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                            Chat/Mails
+                        </label>
+                      
+                        <label id="Dinnerdate" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Dinner date
+                        </label>
+                  
+                        <label id="Datingwithoutissues" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Dating without issues
+                        </label>
+            
+
+                        <label id="Travel" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Travel
+                        </label>
+                
+                        <label id="Otheractivites" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Other activites
+                        </label>
+                 
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      YOUR PREFERENCES
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+               
+ 
+                        <label id="Cybersex" style="display:none;"  class="form-check-label" for="flexCheckDefault">
+                          Cybersex
+                        </label>
+           
+                        <label id="Livedating" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Live dating
+                        </label>
+           
+                        <label id="Bodyfetishist" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Body fetishist
+                        </label>
+                    
+
+                        <label id="ExhibitionismNaturism" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Exhibitionism/Naturism
+                        </label>
+           
+                        <label id="Straight" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Straight
+                        </label>
+                  
+                        <label id="Coupleexchange" style="display:none;"  class="form-check-label" for="flexCheckChecked">
+                          Couple exchange
+                        </label>
+            
+                        <label id="Roleplays" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Roleplays
+                        </label>
+                
+                        <label id="BDSM" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                            BDSM
+                        </label>
+                 
+                        <label id="ClothesToys" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Clothes/Toys
+                        </label>
+                  
+                        <label id="SexingroupsThreesomes" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Sex in groups/Threesomes
+                        </label>
+               
+                        <label id="Bisexual" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Bisexual
+                        </label>
+                    
+                        <label id="Massages" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Massages
+                        </label>
+                     
+                        <label id="Gastronomy" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Gastronomy
+                        </label>
+                     
+                        <label  id="Gamer" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Gamer
+                        </label>
+                
+                        <label id="Spirituality" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Spirituality
+                        </label>
+                      
+                        <label id="Fashion" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Fashion
+                        </label>
+                 
+                        <label id="Environmentalism" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Environmentalism
+                        </label>
+                 
+                        <label id="Vegetarianism" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Vegetarianism
+                        </label>
+                      
+                        <label id="Feminism" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Feminism
+                        </label>
+                  
+                        <label id="Astrology" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Astrology
+                        </label>
+                  
+                        <label id="Politics" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Politics
+                        </label>
+                  
+                        <label id="OutDoor" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          OutDoor
+                        </label>
+                      
+                        <label id="Wine" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Wine
+                        </label>
+                
+                        <label id="Animals" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Animals
+                        </label>
+                 
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        YOUR CHARACTER
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                 
+                        <label id="Open" style="display:none;" class="form-check-label" for="flexCheckDefault">
+                          Open
+                        </label>
+             
+                        <label id="Flexible" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Flexible
+                        </label>
+                  
+                        <label id="Strongnature" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Strong nature
+                        </label>
+                   
+                        <label id="Loyal" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Loyal
+                        </label>
+                   
+                        <label id="Funny" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Funny
+                        </label>
+                      
+                        <label id="Selfconfident" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Self confident
+                        </label>
+                  
+                        <label id="Compliant" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Compliant
+                        </label>
+           
+                        <label id="Loving" style="display: none;" class="form-check-label" for="flexCheckChecked">
+                          Loving
+                        </label>
+                
+                
+                          <label id="Curious" style="display: none;" class="form-check-label" for="flexCheckChecked">Curious</label>
+            
+                        <label id="ActiveEntrepreneur" style="display: none;"  class="form-check-label" for="flexCheckChecked">Active/Entrepreneur</label>
+                
+                   </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="card">
+            <div class="card-header">
+              Local profile information
+            </div>
+            <div class="card-body">
+              <div>
+                <label for="TextareaLocal" class="form-label">information</label>
+                <textarea class="form-control" id="TextareaLocal" rows="3"></textarea>
+              </div>
+              <br>
+              <div id="btncontainerlocal">
+         
+                
+              </div>
+              <br>
+              <div>
+                <ul id="listnotaslocal">
+                 
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+          <!--=========================================================-->
+          <!-- selected chat -->
+        <div  class="col-sm-6 col-md-6">
+              <div class="chat-message">
+                <ul class="friend-list">
+                       <li class="active bounceInDown">
+                         <a href="#" class="clearfix">
+                           <!--<img src="https://bootdey.com/img/Content/user_1.jpg" alt="" class="img-circle">-->
+                           <div class="friend-name">
+                             <strong id="usertargename"></strong>
+                           </div>
+                           <small id="usertargestatus" class="time text-muted"></small>
+                         </a>
+                       </li>
+                   </ul>
+                  <ul id="idchat" class="chat">
+  
+                  </ul>
+              </div>
+              <div class="chat-box">
+              </div>
+      </div>
+      <div  class="col-sm-3 col-md-3">
+        <div class="card">
+          <div class="card-header" id="NicknameshowtextT">
+          </div>
+          <div class="card-body">
+            <div  id="img-previewT"></div>
+            <div class="row">
+              <span class="col">
+                <b>Name</b>
+                <p id="NameshowtextT"></p>
+              </span>
+              <span class="col">
+                <b>Age</b>
+                <p id="AgeshowtextT"></p>
+              </span>
+            </div>
+            <div class="row">
+              <span class="col">
+                <b>Gender</b>
+                <p id="GendershowtextT"></p>
+              </span>
+              <span class="col">
+                <b>Seeking</b>
+                <p id="SeekingshowtextT"></p>
+              </span>
+            </div>
+            <div class="row">
+              <span class="col">
+                <b>Hair color</b>
+                <p id="HaircolorshowtextT"></p>
+              </span>
+              <span class="col">
+                <b>Eye color</b>
+                <p id="EyecolorshowtextT"></p>
+              </span>
+            </div>
+            <div class="row">
+              <span class="col">
+                <b>Body type</b>
+                <p id="BodytypeshowtextT"></p>
+              </span>
+              <span class="col">
+                <b>Height</b>
+                <p id="HeightshowtextT"></p>
+              </span>
+            </div>
+            <div class="row">
+              <span class="col">
+                <b>Weight</b>
+                <p id="WeightshowtextT"></p>
+              </span>
+              <span class="col">
+                <b>Smoker</b>
+                <p id="SmokershowtextT"></p>
+              </span>
+            </div>
+            <div class="row">
+              <span class="col">
+                <b>Describe</b>
+                <p id="DescribeT"></p>
+              </span>
+            </div>
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneT" aria-expanded="true" aria-controls="collapseOne">
+                      FOR
+                  </button>
+                </h2>
+                <div id="collapseOneT" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                  
+                      <label id="AffairT" style="display:none;" class="form-check-label" for="flexCheckDefault">
+                        Affair
+                      </label>
+                
+                      <label id="OpenrelationshipT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Open relationship
+                      </label>
+                 
+                      <label id="HangingoutT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Hanging out
+                      </label>
+              
+                      <label id="CouplerelationshipT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Couple relationship
+                      </label>
+                 
+                      <label id="OnerightstandsT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        One night stands
+                      </label>
+              
+                      <label id="FriendshipT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Friendship
+                      </label>
+                 
+                      <label id="GymSportsT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Gym/Sports
+                      </label>
+                
+                      <label id="ChatMailsT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          Chat/Mails
+                      </label>
+           
+                      <label id="DinnerdateT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Dinner date
+                      </label>
+                 
+                      <label id="DatingwithoutissuesT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Dating without issues
+                      </label>
+                
+
+                      <label id="TravelT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Travel
+                      </label>
+                  
+                      <label id="OtheractivitesT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Other activites
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoT" aria-expanded="false" aria-controls="collapseTwo">
+                    PREFERENCES
+                  </button>
+                </h2>
+                <div id="collapseTwoT" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+          
+
+                      <label id="CybersexT" style="display:none;"  class="form-check-label" for="flexCheckDefault">
+                        Cybersex
+                      </label>
+      
+                      <label id="LivedatingT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Live dating
+                      </label>
+               
+                      <label id="BodyfetishistT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Body fetishist
+                      </label>
+        
+
+                      <label id="ExhibitionismNaturismT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Exhibitionism/Naturism
+                      </label>
+         
+                      <label id="StraightT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Straight
+                      </label>
+               
+                      <label id="CoupleexchangeT" style="display:none;"  class="form-check-label" for="flexCheckChecked">
+                        Couple exchange
+                      </label>
+            
+                      <label id="RoleplaysT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Roleplays
+                      </label>
+               
+                      <label id="BDSMT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                          BDSM
+                      </label>
+               
+                      <label id="ClothesToysT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Clothes/Toys
+                      </label>
+                  
+                      <label id="SexingroupsThreesomesT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Sex in groups/Threesomes
+                      </label>
+                  
+                      <label id="BisexualT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Bisexual
+                      </label>
+        
+                      <label id="MassagesT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Massages
+                      </label>
+
+                      <label id="GastronomyT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Gastronomy
+                      </label>
+
+                      <label  id="GamerT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Gamer
+                      </label>
+
+                      <label id="SpiritualityT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Spirituality
+                      </label>
+
+                      <label id="FashionT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Fashion
+                      </label>
+
+                      <label id="EnvironmentalismT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Environmentalism
+                      </label>
+
+                      <label id="VegetarianismT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Vegetarianism
+                      </label>
+
+                      <label id="FeminismT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Feminism
+                      </label>
+
+                      <label id="AstrologyT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Astrology
+                      </label>
+
+                      <label id="PoliticsT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Politics
+                      </label>
+
+                      <label id="OutDoorT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        OutDoor
+                      </label>
+
+                      <label id="WineT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Wine
+                      </label>
+
+                      <label id="AnimalsT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Animals
+                      </label>
+
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeT" aria-expanded="false" aria-controls="collapseThree">
+                     CHARACTER
+                  </button>
+                </h2>
+                <div id="collapseThreeT" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+           
+                      <label id="OpenT" style="display:none;" class="form-check-label" for="flexCheckDefault">
+                        Open
+                      </label>
+  
+                      <label id="FlexibleT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Flexible
+                      </label>
+               
+                      <label id="StrongnatureT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Strong nature
+                      </label>
+                
+                      <label id="LoyalT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Loyal
+                      </label>
+                  
+                      <label id="FunnyT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Funny
+                      </label>
+         
+                      <label id="SelfconfidentT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Self confident
+                      </label>
+
+                      <label id="CompliantT" style="display:none;" class="form-check-label" for="flexCheckChecked">
+                        Compliant
+                      </label>
+
+                      <label id="LovingT" style="display: none;" class="form-check-label" for="flexCheckChecked">
+                        Loving
+                      </label>
+
+              
+                        <label id="CuriousT" style="display: none;" class="form-check-label" for="flexCheckChecked">Curious</label>
+
+                      <label id="ActiveEntrepreneurT" style="display: none;"  class="form-check-label" for="flexCheckChecked">Active/Entrepreneur</label>
+
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="card">
+            <div class="card-header">
+              User's personal information
+            </div>
+            <div class="card-body">
+              <div>
+                <label for="TextareaUser" class="form-label">information</label>
+                <textarea class="form-control" id="TextareaUser" rows="3"></textarea>
+              </div>
+              <br>
+              <div id="btncontainerUser">
+         
+                
+              </div>
+              <br>
+              <div>
+                <ul id="listnotasUser">
+                 
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </main>
+    <script src="../../scripts/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../scripts/const_functions.js"></script>
+    <script src="../../scripts/firebaseconfig.js"></script>
+    <script src="../../scripts/model/Messager.js"></script>
+    <script src="searchChat.js"></script>
+  </body>
+</html>
+
+ 
+   
+

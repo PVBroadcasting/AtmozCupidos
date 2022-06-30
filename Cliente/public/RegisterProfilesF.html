@@ -1,0 +1,1086 @@
+<link href="view/sing-up/style.css" rel="stylesheet">
+
+<div id="containbmanin" class="w-full overflow-hidden h-screen px-5">
+  <!-- Column Content -->
+  <div class="flex space-x-1 w-9/12 m-auto">
+    <div style="border-radius: 2em;" class=" mx-auto overflow-hidden shadow-lg dark:bg-gray-800 my-32">
+      <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">     
+        <div style="height: 70vh;width: 30em;" class="carousel-inner w-full bg-white" id="imagen"> 
+        </div>
+        <svg id="displaynameubica" style="position: absolute; bottom: 100px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="90" viewBox="0 0 553 127">
+          <defs>
+            <filter id="testname" x="0" y="0" width="553" height="127" filterUnits="userSpaceOnUse">
+              <feOffset dy="8" input="SourceAlpha"/>
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feFlood flood-opacity="0.89"/>
+              <feComposite operator="in" in2="blur"/>
+              <feComposite in="SourceGraphic"/>
+            </filter>
+          </defs>
+          <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#testname)">
+            <text id="testname-2" transform="translate(9 1)" fill="#d7b6b6" font-size="50" font-family="ArialRoundedMTBold, Arial Rounded MT">
+              <tspan x="0" y="47" id="Username"></tspan>
+              <tspan font-size="30" font-family="MicrosoftYaHeiUI, Microsoft YaHei UI">
+                <tspan y="99" x="20" font-size="40" font-family="MicrosoftJhengHeiUIBold, Microsoft JhengHei UI" id="UserUbication"></tspan>
+              </tspan>
+            </text>
+          </g>
+        </svg>
+
+        <svg id="btnhideormoreifno" style="position: absolute; bottom: 5px;" xmlns="http://www.w3.org/2000/svg" width="100%" height="75" viewBox="0 -8 376 81">
+          <a href="#"  onclick="hidemoreinforeg()" style="cursor: pointer;"  class="transition duration-500 ease-in-out transform hover:-translate-y-1" ><rect id="Rectángulo_60" data-name="Rectángulo 60" width="376" height="45" rx="20" fill="#a77676"/>
+          <text id="Editar_Perfil_" data-name="Editar Perfil
+        " transform="translate(101 35)" fill="#190e0c" font-size="30" font-family="MicrosoftJhengHeiUIBold, Microsoft JhengHei UI"><tspan x="0" y="0">Editar Perfil</tspan><tspan x="0" y="38"></tspan></text></a>
+        </svg>
+        <div id="divdescript" class="px-1 absolute bottom-14 duration-500" style="width: 30em;">
+          <div class="collapse px-10 pl-12 pt-4 h-100 estoboxf" style="overflow: scroll;" id="moreinfo">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="416" height="70" viewBox="0 -20 493 92">
+              <defs>
+                <filter id="Fotos_" x="0" y="0" width="410" height="70" filterUnits="userSpaceOnUse">
+                  <feOffset dy="8" input="SourceAlpha"/>
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feFlood flood-opacity="0.89"/>
+                  <feComposite operator="in" in2="blur"/>
+                  <feComposite in="SourceGraphic"/>
+                </filter>
+              </defs>
+              <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Fotos_)">
+                <text id="Fotos_2" data-name="Fotos" transform="translate(9 1)" fill="#d7b6b6" font-size="50" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="47">Nombre</tspan></text>
+              </g>
+            </svg>
+            <input id="Name" type="text" style="background:#735151" class="text-white  ml-7 rounded-full px-2 py-1"  placeholder="" >
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="416" height="70" viewBox="0 -20 490 92">
+              <defs>
+                <filter id="Fotos_" x="0" y="0" width="410" height="70" filterUnits="userSpaceOnUse">
+                  <feOffset dy="8" input="SourceAlpha"/>
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feFlood flood-opacity="0.89"/>
+                  <feComposite operator="in" in2="blur"/>
+                  <feComposite in="SourceGraphic"/>
+                </filter>
+              </defs>
+              <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Fotos_)">
+                <text id="Fotos_2" data-name="Fotos" transform="translate(9 1)" fill="#d7b6b6" font-size="50" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="47">Sobrenombre</tspan></text>
+              </g>
+            </svg>
+            <input id="Nickname" type="text" style="background:#735151" class=" text-white  ml-7 rounded-full px-2 py-1"  placeholder="" >
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="416" height="70" viewBox="0 -20 490 92">
+              <defs>
+                <filter id="Fotos_" x="0" y="0" width="410" height="70" filterUnits="userSpaceOnUse">
+                  <feOffset dy="8" input="SourceAlpha"/>
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feFlood flood-opacity="0.89"/>
+                  <feComposite operator="in" in2="blur"/>
+                  <feComposite in="SourceGraphic"/>
+                </filter>
+              </defs>
+              <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Fotos_)">
+                <text id="Fotos_2" data-name="Fotos" transform="translate(9 1)" fill="#d7b6b6" font-size="50" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="47">Edad</tspan></text>
+              </g>
+            </svg>
+            <input id="Age" type="text" style="background:#735151" class=" text-white  ml-7 rounded-full px-2 py-1"  placeholder="" >
+            <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="416" height="70" viewBox="0 -20 493 92">
+              <defs>
+                <filter id="Fotos_" x="0" y="0" width="410" height="70" filterUnits="userSpaceOnUse">
+                  <feOffset dy="8" input="SourceAlpha"/>
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feFlood flood-opacity="0.89"/>
+                  <feComposite operator="in" in2="blur"/>
+                  <feComposite in="SourceGraphic"/>
+                </filter>
+              </defs>
+              <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Fotos_)">
+                <text id="Fotos_2" data-name="Fotos" transform="translate(9 1)" fill="#d7b6b6" font-size="50" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="47">Fotos</tspan></text>
+              </g>
+            </svg>
+            <div class="mt-1 w-full ml-2" style="min-height: 15em;">
+              <div id="imagesUsers" class="grid grid-cols-3 gap-4">
+              
+
+              </div>
+              <div class="row mt-2">
+                <label for="choose-files">
+                  <div id="img-previewcardss"  class="bg-gray-100 rounded-2xl">
+                  <svg  xmlns="http://www.w3.org/2000/svg" width="100%" height="3em" style="padding: 0.5em;" viewBox="0 0 90.313 96">
+                    <g id="Grupo_56" data-name="Grupo 56" transform="translate(-996 -288)">
+                      <rect id="Rectángulo_107" data-name="Rectángulo 107" width="19" height="96" rx="5" transform="translate(1032 288)" fill="#8b8181"/>
+                      <rect id="Rectángulo_108" data-name="Rectángulo 108" width="19" height="90.313" rx="5" transform="translate(996 345.473) rotate(-90)" fill="#8b8181"/>
+                    </g>
+                  </svg>
+                </div>
+              </label>
+              <input type="file" accept="image/*" id="choose-files" name="choose-files" multiple="mutliple">
+              </div>
+            </div>
+            <br><br><br><br>
+            <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="416" height="70" viewBox="0 -20 450 92">
+              <defs>
+                <filter id="Fotos_" x="0" y="0" width="410" height="70" filterUnits="userSpaceOnUse">
+                  <feOffset dy="8" input="SourceAlpha"/>
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feFlood flood-opacity="0.89"/>
+                  <feComposite operator="in" in2="blur"/>
+                  <feComposite in="SourceGraphic"/>
+                </filter>
+              </defs>
+              <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Fotos_)">
+                <text id="Fotos_2" data-name="Fotos" transform="translate(9 1)" fill="#d7b6b6" font-size="50" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="45">Verificar Cuenta</tspan></text>
+              </g>
+            </svg>
+            <div class=" h-40 w-full ml-1 flex">
+              <div class="w-50 h-full  m-3 " >
+                <center class="h-full" >
+                <div id="img-previewcardID"  class="bg-gray-100 rounded-2xl h-40">
+                <svg  xmlns="http://www.w3.org/2000/svg" width="90.313" height="100%" viewBox="0 0 90.313 96">
+                  <g id="Grupo_56" data-name="Grupo 56" transform="translate(-996 -288)">
+                    <rect id="Rectángulo_107" data-name="Rectángulo 107" width="19" height="96" rx="5" transform="translate(1032 288)" fill="#8b8181"/>
+                    <rect id="Rectángulo_108" data-name="Rectángulo 108" width="19" height="90.313" rx="5" transform="translate(996 345.473) rotate(-90)" fill="#8b8181"/>
+                  </g>
+                </svg>
+              </div>
+              <input class="hidden" type="file" accept="image/*" id="choose-filecardID" name="choose-filecardID" />
+              <label class="hidden" for="choose-filecardID" id="labelchoose-filecardID">Adjuntar Foto de ID</label>
+                <svg  xmlns="http://www.w3.org/2000/svg" width="100%" height="75" viewBox="0 -8 376 81">
+                  <a href="#" onclick="clickinputimg('labelchoose-filecardID')"  style="cursor: pointer;"  class="transition duration-500 ease-in-out transform hover:-translate-y-1" >
+                    <rect id="Rectángulo_60" data-name="Rectángulo 60" width="376" height="70" rx="20" fill="#a77676"/>
+                    <text style="font-weight: bold;" id="_" data-name="Editar Perfil" transform="translate(101 35)" fill="white" font-size="30" font-family="MicrosoftJhengHeiUIBold, Microsoft JhengHei UI">
+                      <tspan x="25" y="8">Foto ID</tspan><tspan x="0" y="38"></tspan>
+                    </text>
+                 </a>
+                </svg>
+              </center>
+              </div>
+              <div class="w-50 h-full m-3 ">
+                <center class="h-full">
+                  <div id="img-previewcardSostenidoID" class="bg-gray-100 rounded-2xl h-40">
+                  <svg  xmlns="http://www.w3.org/2000/svg" width="90.313" height="100%" viewBox="0 0 90.313 96">
+                    <g id="Grupo_56" data-name="Grupo 56" transform="translate(-996 -288)">
+                      <rect id="Rectángulo_107" data-name="Rectángulo 107" width="19" height="96" rx="5" transform="translate(1032 288)" fill="#8b8181"/>
+                      <rect id="Rectángulo_108" data-name="Rectángulo 108" width="19" height="90.313" rx="5" transform="translate(996 345.473) rotate(-90)" fill="#8b8181"/>
+                    </g>
+                  </svg>
+                </div>
+                <input class="hidden" type="file" accept="image/*" id="choose-fileSostenidoID" name="choose-fileSostenidoID" />
+                <label  id="labelchoose-fileSostenidoID"  class="hidden" for="choose-fileSostenidoID">Adjuntar Foto Sostenido ID</label>
+                  <svg  xmlns="http://www.w3.org/2000/svg" width="100%" height="75" viewBox="0 -8 376 81">
+                    <a href="#" onclick="clickinputimg('labelchoose-fileSostenidoID')"  style="cursor: pointer;"  class="transition duration-500 ease-in-out transform hover:-translate-y-1" >
+                      <rect id="Rectángulo_60" data-name="Rectángulo 60" width="376" height="70" rx="20" fill="#a77676"/>
+                      <text style="font-weight: bold;" id="_" data-name="Editar Perfil" transform="translate(101 35)" fill="white" font-size="30" font-family="MicrosoftJhengHeiUIBold, Microsoft JhengHei UI">
+                        <tspan x="-50" y="8">Foto sosteniendo ID</tspan><tspan x="0" y="38"></tspan>
+                      </text>
+                  </a>
+                  </svg>
+                </center>
+              </div>
+            </div>
+            <br><br>
+            <br><br>
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="75" viewBox="0 -8 376 81">
+              <a href="#"  onclick="btnverific()" style="cursor: pointer;"  class="transition duration-500 ease-in-out transform hover:-translate-y-1" ><rect id="Rectángulo_60" data-name="Rectángulo 60" width="376" height="45" rx="20" fill="#a77676"/>
+              <text id="Editar_Perfil_" data-name="Editar Perfil
+            " transform="translate(101 35)" fill="white" font-size="30" font-family="MicrosoftJhengHeiUIBold, Microsoft JhengHei UI"><tspan x="25" y="0">Verificar</tspan><tspan x="0" y="38"></tspan></text></a>
+            </svg>
+            <br><br>
+            <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="416" height="70" viewBox="0 -20 350 92">
+              <defs>
+                <filter id="Fotos_" x="0" y="0" width="410" height="70" filterUnits="userSpaceOnUse">
+                  <feOffset dy="8" input="SourceAlpha"/>
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feFlood flood-opacity="0.89"/>
+                  <feComposite operator="in" in2="blur"/>
+                  <feComposite in="SourceGraphic"/>
+                </filter>
+              </defs>
+              <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Fotos_)">
+                <text id="Fotos_2" data-name="Fotos" transform="translate(9 1)" fill="#d7b6b6" font-size="50" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="47">Descripción</tspan></text>
+              </g>
+            </svg>
+            <textarea class="block w-full px-4 py-2 mt-2 ml-2 text-gray-700 border bg-gray-100 border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:outline-none focus:ring" id="Describe" rows="6"></textarea>
+              <!---->
+              <!--selects-->
+              <!---->
+            <div class="my-20 w-full ml-2 flex">
+              <div class="w-50 h-full  m-2 ">
+                <div class="mt-3">
+                  <label class="font-bold text-white" for="Country">País</label>
+                  <select style="background-color: #A67777;" required class="block w-full px-4 py-2 mt-2 text-gray-700  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" id="Country" name="country">
+                    <option value="España">España</option>
+                  </select>
+                </div>
+                <div class="mt-3">
+                  <label class="font-bold text-white" for="City">Ciudad</label>
+                  <select style="background-color: #A67777;" id="City" name="City" required class="block w-full px-4 py-2 mt-2 text-gray-700  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" >                            
+                  </select>
+                </div>
+                <div class="mt-3 grid">
+                  <label for="state" class="font-bold text-white">Buscando</label>
+                  <select style="background-color: #A67777;" multiple="multiple" class="block w-full px-4 py-2 mt-2 text-gray-700  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring js-example-basic-multiple"  id="Seeking" required="">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Binare">Couple</option>
+                  </select>
+                </div>
+                <div class="mt-3">
+                  <label for="state" class="font-bold text-white">Altura</label>
+                  <input style="background-color: #A67777;" required="" id="Height" class="block w-full px-4 py-2 mt-2 text-gray-700  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" type="number" min="1" max="500" value="160">
+                </div>
+                <div class="mt-3">
+                  <label for="state" class="font-bold text-white">Cuerpo</label>
+                  <select style="background-color: #A67777;" class="block w-full px-4 py-2 mt-2 text-gray-700 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" id="Bodytype" required="">
+                    <option value="Curvy">Curvy</option>
+                    <option value="Slim">Slim</option>
+                    <option value="Sport">Sport</option>
+                    <option value="Weight">Weight</option>
+                    <option value="Fit">Fit</option>
+                  </select>
+                </div>
+                <div class="mt-3">
+                  <label for="state" class="font-bold text-white">Color de Ojos</label>
+                  <select style="background-color: #A67777;" class="block w-full px-4 py-2 mt-2 text-gray-700  rounded-md  focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" id="Eyecolor" required="">
+                    <option value="Green">Green</option>
+                    <option value="Black">Black</option>
+                    <option value="Brown">Brown</option>
+                    <option value="LightBrown">Light Brown</option>
+                    <option value="Blue">Blue</option>
+
+                  </select>
+      
+                </div>
+              </div>
+              <div class="w-50 h-full  m-2 ">
+                <div class="mt-3">
+                  <label class="font-bold text-white" for="Province">Provincia</label>
+                  <select style="background-color: #A67777;" id="Region" name="Region" required class="block w-full px-4 py-2 mt-2 text-gray-700  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" >
+            
+                  </select>
+                </div>
+                <div class="mt-3">
+                  <label for="state" class="font-bold text-white">Yo soy</label>
+                  <select style="background-color: #A67777;" class="block w-full px-4 py-2 mt-2 text-gray-700  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" id="state" required="">
+                    <option value="single">Single</option>
+                    <option value="Open Relationship">Open Relationship</option>
+                    <option value="Widow">Widow</option>
+                    <option value="Compromised">Compromised</option>
+                    <option value="married">Married</option>
+                    <option value="divorced">Divorced</option>
+                  </select>
+                </div>
+                <div class="mt-3">
+                  <label for="lastName" class="font-bold text-white">Idioma</label>
+                  <select style="background-color: #A67777;" multiple="multiple" class="block w-full px-4 py-2 mt-2 text-gray-700 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring js-example-basic-multiple" id="Languange" name="languange">
+                    <option value="EN">EN</option>
+                    <option value="SP">SP</option>
+                  </select>
+                </div>
+                <div class="mt-3">
+                  <label  for="state" class="font-bold text-white">Peso</label>
+                  <input style="background-color: #A67777;" required="" id="Weight" class="block w-full px-4 py-2 mt-2 text-gray-700  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" type="number" min="1" max="500" value="60">
+                  <div class="invalid-feedback">
+                    Please provide a valid Weight.
+                  </div>
+                </div>
+
+
+                <div class="mt-3">
+                  <label  for="state" class="font-bold text-white">Fumador</label>
+                  <select style="background-color: #A67777;" class="block w-full px-4 py-2 mt-2 text-gray-700  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" id="Smoker" required="">
+                    <option value="NonSmoker">Non Smoker</option>
+                    <option value="Smoker">Smoker</option>
+                    <option value="SocialSmoker">Social Smoker</option>
+                  </select>
+                </div>
+                <div class="mt-3">
+                  <label  for="state" class="font-bold text-white">Color de Pelo</label>
+                  <select style="background-color: #A67777;" class="block w-full px-4 py-2 mt-2 text-gray-700 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" id="Haircolor" required="">
+                    <option value="Black">Black</option>
+                    <option value="Brown">Brown</option>
+                    <option value="Blonde">Blonde</option>
+                    <option value="LightBrown">Light Brown</option>
+                    <option value="Red">Red</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div  class="mt-3">
+              <div class="flex flex-col space-y-2 p-3">
+                <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="416" height="70" viewBox="0 -20 450 92">
+                  <defs>
+                    <filter id="Fotos_" x="0" y="0" width="410" height="70" filterUnits="userSpaceOnUse">
+                      <feOffset dy="8" input="SourceAlpha"/>
+                      <feGaussianBlur stdDeviation="3" result="blur"/>
+                      <feFlood flood-opacity="0.89"/>
+                      <feComposite operator="in" in2="blur"/>
+                      <feComposite in="SourceGraphic"/>
+                    </filter>
+                  </defs>
+                  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Fotos_)">
+                    <text id="Fotos_2" data-name="Fotos" transform="translate(9 1)" fill="#d7b6b6" font-size="50" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="35" y="45">Intereses:</tspan></text>
+                  </g>
+                </svg>
+              <div class="flex flex-wrap">
+                <div class="m-1">
+                  <input id="Affairinput" type="checkbox" value="Affair" >
+                  <label for="Affairinput" class="form-check-label check">
+                    Affair
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="OpenrelationshipChecked" class="form-check-input" type="checkbox" value="Openrelationship">
+                  <label class="form-check-label check" for="OpenrelationshipChecked">
+                    Relación abierta
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="HangingoutChecked" class="form-check-input" type="checkbox" value="Hangingout">
+                  <label class="form-check-label check" for="HangingoutChecked">
+                    pasar el rato
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="CouplerelationshipChecked" class="form-check-input" type="checkbox" value="Couplerelationship">
+                  <label class="form-check-label check" for="CouplerelationshipChecked">
+                    Relación de pareja
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="OnerightstandsChecked" class="form-check-input" type="checkbox" value="Onerightstands">
+                  <label class="form-check-label check" for="OnerightstandsChecked">
+                    Salir una noche
+                  </label>
+                </div>
+
+                <div class="m-1">
+                  <input id="FriendshipChecked" class="form-check-input" type="checkbox" value="Friendship">
+                  <label class="form-check-label check" for="FriendshipChecked">
+                    Amistad
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="GymSportsChecked" class="form-check-input" type="checkbox" value="GymSports">
+                  <label class="form-check-label check" for="GymSportsChecked">
+                   Gimnasio/Deportes
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="ChatMailsChecked" class="form-check-input" type="checkbox" value="ChatMails">
+                  <label class="form-check-label check" for="ChatMailsChecked">
+                      Chat/Correos
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="DinnerdateChecked" class="form-check-input" type="checkbox" value="Dinnerdate">
+                  <label class="form-check-label check" for="DinnerdateChecked">
+                    Citas para cenar
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="DatingwithoutissuesChecked" class="form-check-input" type="checkbox" value="Datingwithoutissues">
+                  <label class="form-check-label check" for="DatingwithoutissuesChecked">
+                   Citas sin problemas
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="TravelChecked" class="form-check-input" type="checkbox" value="Travel">
+                  <label class="form-check-label check" for="TravelChecked">
+                    Viaje
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="OtheractivitesChecked" class="form-check-input" type="checkbox" value="Otheractivites">
+                  <label class="form-check-label check" for="OtheractivitesChecked">
+                    Otras Actividades
+                  </label>
+                </div>
+              </div>
+              </div>
+              <div class="flex flex-col space-y-2 p-3">
+                <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="416" height="70" viewBox="0 -20 450 92">
+                  <defs>
+                    <filter id="Fotos_" x="0" y="0" width="410" height="70" filterUnits="userSpaceOnUse">
+                      <feOffset dy="8" input="SourceAlpha"/>
+                      <feGaussianBlur stdDeviation="3" result="blur"/>
+                      <feFlood flood-opacity="0.89"/>
+                      <feComposite operator="in" in2="blur"/>
+                      <feComposite in="SourceGraphic"/>
+                    </filter>
+                  </defs>
+                  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Fotos_)">
+                    <text id="Fotos_2" data-name="Fotos" transform="translate(9 1)" fill="#d7b6b6" font-size="50" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="10" y="45">Preferencias:</tspan></text>
+                  </g>
+                </svg>
+              <div class="flex flex-wrap">
+                <div class="m-1">
+                  <input id="CybersexCheckDefault" class="form-check-input" type="checkbox" value="Cybersex" >
+                  <label class="form-check-label check" for="CybersexCheckDefault">
+                    Cibersexo
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="LivedatingCheckChecked" class="form-check-input" type="checkbox" value="Livedating">
+                  <label class="form-check-label check" for="LivedatingCheckChecked">
+                    Citas en vivo
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="BodyfetishistChecked" class="form-check-input" type="checkbox" value="Bodyfetishist">
+                  <label class="form-check-label check" for="BodyfetishistChecked">
+                    Fetichista del cuerpo
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="ExhibitionismNaturismChecked" class="form-check-input" type="checkbox" value="ExhibitionismNaturism">
+                  <label class="form-check-label check" for="ExhibitionismNaturismChecked">
+                    Exhibicionismo/Naturismo
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="StraightChecked" class="form-check-input" type="checkbox" value="Straight">
+                  <label class="form-check-label check" for="StraightChecked">
+                    Derecho
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="CoupleexchangeChecked" class="form-check-input" type="checkbox" value="Coupleexchange">
+                  <label class="form-check-label check" for="CoupleexchangeChecked">
+                    Intercambio de pareja
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="RoleplaysChecked" class="form-check-input" type="checkbox" value="Roleplays">
+                  <label class="form-check-label check" for="RoleplaysChecked">
+                    Juegos de rol
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="BDSMChecked" class="form-check-input" type="checkbox" value="BDSM">
+                  <label class="form-check-label check" for="BDSMChecked">
+                      BDSM
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="ClothesToysChecked" class="form-check-input" type="checkbox" value="ClothesToys">
+                  <label class="form-check-label check" for="ClothesToysChecked">
+                    Ropa/Juguetes
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="SexingroupsThreesomesChecked" class="form-check-input" type="checkbox" value="SexingroupsThreesomes">
+                  <label class="form-check-label check" for="SexingroupsThreesomesChecked">
+                    Sexo en grupo/Tríos
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="BisexualChecked" class="form-check-input" type="checkbox" value="Bisexual">
+                  <label class="form-check-label check" for="BisexualChecked">
+                    Bisexual
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="MassagesChecked" class="form-check-input" type="checkbox" value="Massages">
+                  <label class="form-check-label check" for="MassagesChecked">
+                    Mensajes
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="GastronomyChecked" class="form-check-input" type="checkbox" value="Gastronomy">
+                  <label class="form-check-label check" for="GastronomyChecked">
+                    Gastronomía
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="GamerChecked" class="form-check-input" type="checkbox" value="Gamer">
+                  <label class="form-check-label check" for="GamerChecked">
+                    Juegos
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="SpiritualityChecked" class="form-check-input" type="checkbox" value="Spirituality">
+                  <label class="form-check-label check" for="SpiritualityChecked">
+                    Espiritualidad
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="FashionChecked" class="form-check-input" type="checkbox" value="Fashion">
+                  <label class="form-check-label check" for="FashionChecked">
+                    Moda
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="EnvironmentalismChecked" class="form-check-input" type="checkbox" value="Environmentalism">
+                  <label class="form-check-label check" for="EnvironmentalismChecked">
+                    Ambientalismo
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="VegetarianismChecked" class="form-check-input" type="checkbox" value="Vegetarianism">
+                  <label class="form-check-label check" for="VegetarianismChecked">
+                    Vegetarianismo
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="FeminismChecked" class="form-check-input" type="checkbox" value="Feminism">
+                  <label class="form-check-label check" for="FeminismChecked">
+                    Feminismo
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="AstrologyChecked" class="form-check-input" type="checkbox" value="Astrology">
+                  <label class="form-check-label check" for="AstrologyChecked">
+                    Astrología
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="PoliticsChecked" class="form-check-input" type="checkbox" value="Politics">
+                  <label class="form-check-label check" for="PoliticsChecked">
+                    Política
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="OutDoorChecked" class="form-check-input" type="checkbox" value="OutDoor">
+                  <label class="form-check-label check" for="OutDoorChecked">
+                    Exterior
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="WineChecked" class="form-check-input" type="checkbox" value="Wine">
+                  <label class="form-check-label check" for="WineChecked">
+                    Vino
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="AnimalsChecked" class="form-check-input" type="checkbox" value="Animals">
+                  <label class="form-check-label check" for="AnimalsChecked">
+                    Animales
+                  </label>
+                </div>
+              </div>
+              </div>
+              <div class="flex flex-col space-y-2 p-3">
+                <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="416" height="70" viewBox="0 -20 450 92">
+                  <defs>
+                    <filter id="Fotos_" x="0" y="0" width="410" height="70" filterUnits="userSpaceOnUse">
+                      <feOffset dy="8" input="SourceAlpha"/>
+                      <feGaussianBlur stdDeviation="3" result="blur"/>
+                      <feFlood flood-opacity="0.89"/>
+                      <feComposite operator="in" in2="blur"/>
+                      <feComposite in="SourceGraphic"/>
+                    </filter>
+                  </defs>
+                  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Fotos_)">
+                    <text id="Fotos_2" data-name="Fotos" transform="translate(9 1)" fill="#d7b6b6" font-size="50" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="-5" y="45">Características:</tspan></text>
+                  </g>
+                </svg>
+
+              <div  class="flex flex-wrap">
+                <div class="m-1">
+                  <input id="OpenCheckDefault" class="form-check-input" type="checkbox" value="Open" >
+                  <label class="form-check-label check" for="OpenCheckDefault">
+                    Abierta
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="FlexibleChecked" class="form-check-input" type="checkbox" value="Flexible">
+                  <label class="form-check-label check" for="FlexibleChecked">
+                    Flexible
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="StrongnatureChecked" class="form-check-input" type="checkbox" value="Strongnature">
+                  <label class="form-check-label check" for="StrongnatureChecked">
+                    Naturaleza fuerte
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="LoyalChecked" class="form-check-input" type="checkbox" value="Loyal">
+                  <label class="form-check-label check" for="LoyalChecked">
+                    Leal
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="FunnyChecked" class="form-check-input" type="checkbox" value="Funny">
+                  <label class="form-check-label check" for="FunnyChecked">
+                    Divertida/Divertido
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="SelfconfidentChecked" class="form-check-input" type="checkbox" value="Selfconfident">
+                  <label class="form-check-label check" for="SelfconfidentChecked">
+                    seguro de sí mismo
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="CompliantChecked" class="form-check-input" type="checkbox" value="Compliant">
+                  <label class="form-check-label check" for="CompliantChecked">
+                    Obediente
+                  </label>
+                </div>
+                <div class="m-1">
+                  <input id="LovingChecked" class="form-check-input" type="checkbox" value="Loving">
+                  <label class="form-check-label check" for="LovingChecked">
+                    Cariñosa/Cariñoso
+                  </label>
+                </div>
+                <div class="m-1">
+                    <input id="CuriousChecked" class="form-check-input" type="checkbox" value="Curious">
+                    <label class="form-check-label check" for="CuriousChecked">Curious</label>
+                </div>
+                <div class="m-1">
+                  <input id="ActiveEntrepreneurChecked" class="form-check-input" type="checkbox" value="ActiveEntrepreneur">
+                  <label class="form-check-label check" for="ActiveEntrepreneurChecked">Active/Entrepreneur</label>
+                </div>
+              </div>
+              </div>
+              </div>
+              <center>
+                <a href="#" id="btnEdit" style="cursor:pointer;"><svg xmlns="http://www.w3.org/2000/svg" width="270" height="75" viewBox="0 0 340 75">
+                  <g id="Grupo_64" data-name="Grupo 64" transform="translate(-1011 -825)">
+                    <rect id="Rectángulo_96" data-name="Rectángulo 96" width="340" height="75" rx="20" transform="translate(1011 825)" fill="#785453"/>
+                  </g>
+                  <text id="GUARDAR" transform="translate(108 23)" fill="#dcd4d4" font-size="23" font-family="MicrosoftYaHeiUI-Bold, Microsoft YaHei UI" font-weight="700"><tspan x="0" y="23">GUARDAR</tspan></text>
+                </svg></a>
+              </center>
+              <br>
+
+              
+          </div>
+      </div>
+      </div>
+
+  
+    </div>
+  </div>
+</div>
+<div id="__nuxt" class="hidden">
+  <!---->
+  <div id="__layout">
+    <main id="tailwindesign">
+      <div data-v-6747275f="">
+        <div class="w-full" data-v-6747275f="">
+          <section class="mx-auto py-15" data-v-6747275f="">
+            <div class=" px-2 lg:px-5" data-v-6747275f="">
+              <div class="flex flex-row  py-3 cursor-text" data-v-6747275f="">
+                <!-- Modal toggle -->
+                <!-- Large Modal -->
+                <div class="hidden overflow-x-hidden overflow-y-auto fixed top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center h-modal sm:h-full" id="large-modal">
+                  <div class="relative w-full max-w-4xl px-4 h-full md:h-auto">
+          <!-- Modal content -->
+          <div class="bg-white rounded-lg shadow relative dark:bg-gray-700">
+            <!-- Modal header -->
+            <div class="flex items-start justify-between p-3 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-gray-900 text-xl lg:text-2xl font-semibold dark:text-white">
+                  <i class="fas fa-award"></i>&nbsp;Verificar Cuenta 
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="large-modal">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="m-4 w-40">
+              <span>Seleccione su país</span>
+              <select id="verificountry" name="country" class="form-control">
+                <option value="">Seleccione su país</option>
+                <option value="AF">Afghanistan</option>
+                <option value="AL">Albania</option>
+                <option value="DZ">Algeria</option>
+                <option value="AS">American Samoa</option>
+                <option value="AD">Andorra</option>
+                <option value="AO">Angola</option>
+                <option value="AI">Anguilla</option>
+                <option value="AR">Argentina</option>
+                <option value="AM">Armenia</option>
+                <option value="AW">Aruba</option>
+                <option value="AU">Australia</option>
+                <option value="AT">Austria</option>
+                <option value="AZ">Azerbaijan</option>
+                <option value="BS">Bahamas</option>
+                <option value="BH">Bahrain</option>
+                <option value="BD">Bangladesh</option>
+                <option value="BB">Barbados</option>
+                <option value="BY">Belarus</option>
+                <option value="BE">Belgium</option>
+                <option value="BZ">Belize</option>
+                <option value="BJ">Benin</option>
+                <option value="BM">Bermuda</option>
+                <option value="BT">Bhutan</option>
+                <option value="BO">Bolivia</option>
+                <option value="BA">Bosnia and Herzegowina</option>
+                <option value="BW">Botswana</option>
+                <option value="BV">Bouvet Island</option>
+                <option value="BR">Brazil</option>
+                <option value="IO">British Indian Ocean Territory</option>
+                <option value="BN">Brunei Darussalam</option>
+                <option value="BG">Bulgaria</option>
+                <option value="BF">Burkina Faso</option>
+                <option value="BI">Burundi</option>
+                <option value="KH">Cambodia</option>
+                <option value="CM">Cameroon</option>
+                <option value="CA">Canada</option>
+                <option value="CV">Cape Verde</option>
+                <option value="KY">Cayman Islands</option>
+                <option value="CF">Central African Republic</option>
+                <option value="TD">Chad</option>
+                <option value="CL">Chile</option>
+                <option value="CN">China</option>
+                <option value="CX">Christmas Island</option>
+                <option value="CC">Cocos (Keeling) Islands</option>
+                <option value="CO">Colombia</option>
+                <option value="KM">Comoros</option>
+                <option value="CG">Congo</option>
+                <option value="CD">Congo, the Democratic Republic of the</option>
+                <option value="CK">Cook Islands</option>
+                <option value="CR">Costa Rica</option>
+                <option value="CI">Cote d'Ivoire</option>
+                <option value="HR">Croatia (Hrvatska)</option>
+                <option value="CU">Cuba</option>
+                <option value="CY">Cyprus</option>
+                <option value="CZ">Czech Republic</option>
+                <option value="DK">Denmark</option>
+                <option value="DJ">Djibouti</option>
+                <option value="DM">Dominica</option>
+                <option value="DO">Dominican Republic</option>
+                <option value="EC">Ecuador</option>
+                <option value="EG">Egypt</option>
+                <option value="SV">El Salvador</option>
+                <option value="GQ">Equatorial Guinea</option>
+                <option value="ER">Eritrea</option>
+                <option value="EE">Estonia</option>
+                <option value="ET">Ethiopia</option>
+                <option value="FK">Falkland Islands (Malvinas)</option>
+                <option value="FO">Faroe Islands</option>
+                <option value="FJ">Fiji</option>
+                <option value="FI">Finland</option>
+                <option value="FR">France</option>
+                <option value="GF">French Guiana</option>
+                <option value="PF">French Polynesia</option>
+                <option value="TF">French Southern Territories</option>
+                <option value="GA">Gabon</option>
+                <option value="GM">Gambia</option>
+                <option value="GE">Georgia</option>
+                <option value="DE">Germany</option>
+                <option value="GH">Ghana</option>
+                <option value="GI">Gibraltar</option>
+                <option value="GR">Greece</option>
+                <option value="GL">Greenland</option>
+                <option value="GD">Grenada</option>
+                <option value="GP">Guadeloupe</option>
+                <option value="GU">Guam</option>
+                <option value="GT">Guatemala</option>
+                <option value="GN">Guinea</option>
+                <option value="GW">Guinea-Bissau</option>
+                <option value="GY">Guyana</option>
+                <option value="HT">Haiti</option>
+                <option value="HM">Heard and Mc Donald Islands</option>
+                <option value="VA">Holy See (Vatican City State)</option>
+                <option value="HN">Honduras</option>
+                <option value="HK">Hong Kong</option>
+                <option value="HU">Hungary</option>
+                <option value="IS">Iceland</option>
+                <option value="IN">India</option>
+                <option value="ID">Indonesia</option>
+                <option value="IR">Iran (Islamic Republic of)</option>
+                <option value="IQ">Iraq</option>
+                <option value="IE">Ireland</option>
+                <option value="IL">Israel</option>
+                <option value="IT">Italy</option>
+                <option value="JM">Jamaica</option>
+                <option value="JP">Japan</option>
+                <option value="JO">Jordan</option>
+                <option value="KZ">Kazakhstan</option>
+                <option value="KE">Kenya</option>
+                <option value="KI">Kiribati</option>
+                <option value="KP">Korea, Democratic People's Republic of</option>
+                <option value="KR">Korea, Republic of</option>
+                <option value="KW">Kuwait</option>
+                <option value="KG">Kyrgyzstan</option>
+                <option value="LA">Lao People's Democratic Republic</option>
+                <option value="LV">Latvia</option>
+                <option value="LB">Lebanon</option>
+                <option value="LS">Lesotho</option>
+                <option value="LR">Liberia</option>
+                <option value="LY">Libyan Arab Jamahiriya</option>
+                <option value="LI">Liechtenstein</option>
+                <option value="LT">Lithuania</option>
+                <option value="LU">Luxembourg</option>
+                <option value="MO">Macau</option>
+                <option value="MK">Macedonia, The Former Yugoslav Republic of</option>
+                <option value="MG">Madagascar</option>
+                <option value="MW">Malawi</option>
+                <option value="MY">Malaysia</option>
+                <option value="MV">Maldives</option>
+                <option value="ML">Mali</option>
+                <option value="MT">Malta</option>
+                <option value="MH">Marshall Islands</option>
+                <option value="MQ">Martinique</option>
+                <option value="MR">Mauritania</option>
+                <option value="MU">Mauritius</option>
+                <option value="YT">Mayotte</option>
+                <option value="MX">Mexico</option>
+                <option value="FM">Micronesia, Federated States of</option>
+                <option value="MD">Moldova, Republic of</option>
+                <option value="MC">Monaco</option>
+                <option value="MN">Mongolia</option>
+                <option value="MS">Montserrat</option>
+                <option value="MA">Morocco</option>
+                <option value="MZ">Mozambique</option>
+                <option value="MM">Myanmar</option>
+                <option value="NA">Namibia</option>
+                <option value="NR">Nauru</option>
+                <option value="NP">Nepal</option>
+                <option value="NL">Netherlands</option>
+                <option value="AN">Netherlands Antilles</option>
+                <option value="NC">New Caledonia</option>
+                <option value="NZ">New Zealand</option>
+                <option value="NI">Nicaragua</option>
+                <option value="NE">Niger</option>
+                <option value="NG">Nigeria</option>
+                <option value="NU">Niue</option>
+                <option value="NF">Norfolk Island</option>
+                <option value="MP">Northern Mariana Islands</option>
+                <option value="NO">Norway</option>
+                <option value="OM">Oman</option>
+                <option value="PK">Pakistan</option>
+                <option value="PW">Palau</option>
+                <option value="PA">Panama</option>
+                <option value="PG">Papua New Guinea</option>
+                <option value="PY">Paraguay</option>
+                <option value="PE">Peru</option>
+                <option value="PH">Philippines</option>
+                <option value="PN">Pitcairn</option>
+                <option value="PL">Poland</option>
+                <option value="PT">Portugal</option>
+                <option value="PR">Puerto Rico</option>
+                <option value="QA">Qatar</option>
+                <option value="RE">Reunion</option>
+                <option value="RO">Romania</option>
+                <option value="RU">Russian Federation</option>
+                <option value="RW">Rwanda</option>
+                <option value="KN">Saint Kitts and Nevis</option>
+                <option value="LC">Saint LUCIA</option>
+                <option value="VC">Saint Vincent and the Grenadines</option>
+                <option value="WS">Samoa</option>
+                <option value="SM">San Marino</option>
+                <option value="ST">Sao Tome and Principe</option>
+                <option value="SA">Saudi Arabia</option>
+                <option value="SN">Senegal</option>
+                <option value="SC">Seychelles</option>
+                <option value="SL">Sierra Leone</option>
+                <option value="SG">Singapore</option>
+                <option value="SK">Slovakia (Slovak Republic)</option>
+                <option value="SI">Slovenia</option>
+                <option value="SB">Solomon Islands</option>
+                <option value="SO">Somalia</option>
+                <option value="ZA">South Africa</option>
+                <option value="GS">South Georgia and the South Sandwich Islands</option>
+                <option value="ES">Spain</option>
+                <option value="LK">Sri Lanka</option>
+                <option value="SH">St. Helena</option>
+                <option value="PM">St. Pierre and Miquelon</option>
+                <option value="SD">Sudan</option>
+                <option value="SR">Suriname</option>
+                <option value="SJ">Svalbard and Jan Mayen Islands</option>
+                <option value="SZ">Swaziland</option>
+                <option value="SE">Sweden</option>
+                <option value="CH">Switzerland</option>
+                <option value="SY">Syrian Arab Republic</option>
+                <option value="TW">Taiwan, Province of China</option>
+                <option value="TJ">Tajikistan</option>
+                <option value="TZ">Tanzania, United Republic of</option>
+                <option value="TH">Thailand</option>
+                <option value="TG">Togo</option>
+                <option value="TK">Tokelau</option>
+                <option value="TO">Tonga</option>
+                <option value="TT">Trinidad and Tobago</option>
+                <option value="TN">Tunisia</option>
+                <option value="TR">Turkey</option>
+                <option value="TM">Turkmenistan</option>
+                <option value="TC">Turks and Caicos Islands</option>
+                <option value="TV">Tuvalu</option>
+                <option value="UG">Uganda</option>
+                <option value="UA">Ukraine</option>
+                <option value="AE">United Arab Emirates</option>
+                <option value="GB">United Kingdom</option>
+                <option value="US">United States</option>
+                <option value="UM">United States Minor Outlying Islands</option>
+                <option value="UY">Uruguay</option>
+                <option value="UZ">Uzbekistan</option>
+                <option value="VU">Vanuatu</option>
+                <option value="VE">Venezuela</option>
+                <option value="VN">Viet Nam</option>
+                <option value="VG">Virgin Islands (British)</option>
+                <option value="VI">Virgin Islands (U.S.)</option>
+                <option value="WF">Wallis and Futuna Islands</option>
+                <option value="EH">Western Sahara</option>
+                <option value="YE">Yemen</option>
+                <option value="ZM">Zambia</option>
+                <option value="ZW">Zimbabwe</option>
+              </select>
+            </div>
+
+            <div class="p-6  flex">
+              
+              <br>
+              <br>
+                <div style="width: 50%;margin:1%" class=" text-gray-500 text-base leading-relaxed dark:text-gray-400">
+                  <div  ><img src="https://cdn.imagecomics.com/assets/img/default-user-square.svg" /></div>
+                  <center>
+    
+                  </center>
+                </div>
+                <div style="width: 50%;margin:1%" class=" text-gray-500 text-base leading-relaxed dark:text-gray-400">
+                  <div ><img src="https://cdn.imagecomics.com/assets/img/default-user-square.svg" /></div>
+                  <center>
+   
+
+                  </center>
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="flex space-x-2 items-center p-6 border-t border-gray-200 rounded-b dark:border-gray-600">
+                <button id="btnverific" data-modal-toggle="large-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Guardar</button>
+                <button data-modal-toggle="large-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600">Cancelar</button>
+            </div>
+            </div>
+                  </div>
+                </div>
+
+                <button id=""  class="w-40 btn btn-primary"  data-modal-toggle="large-modal"><i class="fas fa-award"></i>&nbsp;Verificar Cuenta </button>&nbsp;
+                <button   class="w-40 btn btn-primary " ><i class="fas fa-save"></i>&nbsp;Save</button>
+              </div>
+              <nav>
+                <div style="border-bottom: 0px!important;" class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">basic information</button>
+                  <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Character & Preferences</button>
+                </div>
+              </nav>
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                  <div class="space-y-4 lg:space-y-8" data-v-6747275f="">
+                    <div class="rounded-lg overflow-hidden border border-gray-300" data-v-6747275f="">
+                      <section class=" p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
+                        <form  id="formregister" class="lg:flex md:col-auto">
+  
+                            <div class="col-12 col-lg-4  p-2 order-last">
+                              <br>
+                              <div class="card">
+                
+                                <div class="card-header">
+                                    Profile Picture
+                                </div>
+                                <div class="card-body">
+                                  <div id="img-preview"></div>
+                                  <center>
+                                  <input type="file" accept="image/*" id="choose-file" name="choose-file" />
+                                  <label for="choose-file">Choose File</label>
+                                  </center>
+                                </div>
+                              </div>
+                              <div class="card">
+                
+                                <div class="card-header">
+                                    Pictures
+                                </div>
+               
+                              </div>
+                              <div class="card">
+                
+                                <div class="card-header">
+                                    Secret Pictures
+                                </div>
+                                <div class="card-body">
+                                  <div class="row">
+                                    <div id="img-previewsp0"></div>
+                                    <div id="img-previewsp1"></div>
+                                  </div>
+                                  <div id="img-previewsp2"></div>
+                                  <center>
+                                    <input type="file" accept="image/*" id="choose-filesp" name="choose-filesp" multiple="mutliple">
+                                    <label for="choose-filesp">Choose Files</label>
+                                  </center>
+                                </div>
+                              </div>
+                            </div>
+
+                        </form>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                  <div class="row col-md-12 col-lg-12">
+                    <div class="col-md-4 col-lg-4">
+                      <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                FOR
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                            
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                      <div class="accordion" id="accordionExample2">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              YOUR PREFERENCES
+                            </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample2">
+                            <div class="accordion-body">
+                   
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                      <div class="accordion" id="accordionExample3">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                YOUR CHARACTER
+                            </button>
+                          </h2>
+                          <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample3">
+                            <div class="accordion-body">
+          
+                           </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="view/sing-up/RegisterProfilesF.js"></script>
+<script src="view/block/block.js"></script>
+<script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+<script src="view/assets/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+$(document).ready(function() {
+  document.getElementById("Idfriendlist").innerHTML = "";
+  document.getElementById("Idfriendlist").innerHTML = "";
+  document.getElementById("Idfriendlist").style.background = "white";
+  document.getElementById("selectMorFDiv").hidden = true;
+});
+function clickinputimg(id){
+document.getElementById(id).click();
+}
+</script>
+

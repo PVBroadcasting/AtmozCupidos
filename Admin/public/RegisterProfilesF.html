@@ -1,0 +1,584 @@
+<link href="view/sing-up/style.css" rel="stylesheet">
+  <div id="__nuxt">
+    <!---->
+    <div id="__layout">
+      <main id="tailwindesign">
+        <div data-v-6747275f="">
+          <div class="w-full" data-v-6747275f="">
+            <section class="mx-auto py-15" data-v-6747275f="">
+              <div class=" px-2 lg:px-5" data-v-6747275f="">
+                <div class="flex flex-col items-end py-3 cursor-text" data-v-6747275f="">
+                  <button id="btnEdit" class="w-40 btn btn-primary ">Save</button>
+                </div>
+                <nav>
+                  <div style="border-bottom: 0px!important;" class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">basic information</button>
+                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Character &amp; Preferences</button>
+                  </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="space-y-4 lg:space-y-8" data-v-6747275f="">
+                      <div class="rounded-lg overflow-hidden border border-gray-300" data-v-6747275f="">
+                        <section class=" p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
+                          <form id="formregister" class="lg:flex md:col-auto">
+                              <div class="col-12 col-lg-8 grid grid-cols-1 gap-6 mt-4 sm:grid-cols-3">
+                                <div>
+                                  <label class="text-gray-700 dark:text-gray-200" for="Name">Name</label>
+                                  <input id="Name" type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder="" value="" required="">
+                                  <div class="invalid-feedback">
+                                    Valid Name is required.
+                                  </div>  
+                                  </div>
+                                  <div>
+                                    <label class="text-gray-700 dark:text-gray-200" for="Nickname">Nickname</label>
+                                      <input id="Nickname" type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder="" value="" required="">
+                                      <div class="invalid-feedback">
+                                        Valid Nickname is required.
+                                      </div>                          
+                                  </div>     
+                                  <div>
+                                    <label class="text-gray-700 dark:text-gray-200" for="Age">Age</label>
+                                      <input id="Age" type="number" min="18" max="200" value="18" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder="" required="">
+                                      <div class="invalid-feedback">
+                                        Please provide a valid Age.
+                                      </div>                          
+                                  </div>
+                                  
+                                  <div>
+                                    <label class="text-gray-700 dark:text-gray-200" for="Country">Country</label>
+                                    <select required="" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" id="Country" name="country">
+                                      <option value="España">España</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                      Valid Country is required.
+                                    </div>  
+                                  </div>
+                                    <div>
+                                      <label class="text-gray-700 dark:text-gray-200" for="Province">Province</label>
+                                      <select id="Region" name="Region" required="" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                                
+                                      <option value="Álava">Álava</option><option value="Albacete">Albacete</option><option value="Alicante">Alicante</option><option value="Almeria">Almeria</option><option value="Asturias">Asturias</option><option value="Avila">Avila</option><option value="Badajoz">Badajoz</option><option value="Baleares">Baleares</option><option value="Barcelona">Barcelona</option><option value="Burgos">Burgos</option><option value="Cáceres">Cáceres</option><option value="Cádiz">Cádiz</option><option value="Cantabria">Cantabria</option><option value="Castellón">Castellón</option><option value="Ciudad_Real">Ciudad_Real</option><option value="Córdoba">Córdoba</option><option value="Cuenca">Cuenca</option><option value="Gerona">Gerona</option><option value="Granada">Granada</option><option value="Guadalajara">Guadalajara</option><option value="Guipuzcoa">Guipuzcoa</option><option value="Huelva">Huelva</option><option value="Huesca">Huesca</option><option value="Jaen">Jaen</option><option value="La_Coruña">La_Coruña</option><option value="La_Rioja">La_Rioja</option><option value="Las_Palmas">Las_Palmas</option><option value="León">León</option><option value="Lérida">Lérida</option><option value="Lugo">Lugo</option><option value="Madrid">Madrid</option><option value="Málaga">Málaga</option><option value="Murcia">Murcia</option><option value="Navarra">Navarra</option><option value="Orense">Orense</option><option value="Palencia">Palencia</option><option value="Pontevedra">Pontevedra</option><option value="Salamanca">Salamanca</option><option value="Islas_Canarias">Islas_Canarias</option><option value="Segovia">Segovia</option><option value="Sevilla">Sevilla</option><option value="Spria">Spria</option><option value="Tarragona">Tarragona</option><option value="Teruel">Teruel</option><option value="Toledo">Toledo</option><option value="Valencia">Valencia</option><option value="Valladolid">Valladolid</option><option value="Vizcaya">Vizcaya</option><option value="Zamora">Zamora</option><option value="Zaragoza">Zaragoza</option></select>
+                                      <div class="invalid-feedback">
+                                        Valid Country is required.
+                                      </div>                          
+                                    </div>     
+                                    <div>
+                                      <label class="text-gray-700 dark:text-gray-200" for="City">City</label>
+                                      <select id="City" name="City" required="" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">                            
+                                      <option value="Amurrio">Amurrio</option><option value="Laudio">Laudio</option><option value="Vitoria-Gasteiz">Vitoria-Gasteiz</option></select>
+                                      <div class="invalid-feedback">
+                                        Valid City is required.
+                                      </div>                         
+                                    </div> 
+                                    <div>
+                                      <label for="lastName" class="text-gray-700 dark:text-gray-200">Languange</label>
+                                      <select multiple="" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring js-example-basic-multiple select2-hidden-accessible" id="Languange" name="languange" data-select2-id="select2-data-Languange" tabindex="-1" aria-hidden="true">
+                                        <option value="EN" data-select2-id="select2-data-5-a79d">EN</option>
+                                        <option value="SP">SP</option>
+                                      </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-1-nex5" style="width: 305px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false"><ul class="select2-selection__rendered" id="select2-Languange-container"><li class="select2-selection__choice" title="EN" data-select2-id="select2-data-6-6p5n"><button type="button" class="select2-selection__choice__remove" tabindex="-1" title="Remove item" aria-label="Remove item" aria-describedby="select2-Languange-container-choice-7i1q-EN"><span aria-hidden="true">×</span></button><span class="select2-selection__choice__display" id="select2-Languange-container-choice-7i1q-EN">EN</span></li></ul><span class="select2-search select2-search--inline"><textarea class="select2-search__field" type="search" tabindex="0" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" autocomplete="off" aria-label="Search" aria-describedby="select2-Languange-container" placeholder="" style="width: 0.75em;"></textarea></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                      <div class="invalid-feedback">
+                                        Valid Languange is required.
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <label for="state" class="text-gray-700 dark:text-gray-200">Sex</label>
+                                      <select class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" id="Sex" required="">
+                                        <option value="Female">Female</option>
+                                        <option value="Male">Male</option>
+                                      </select>
+                                      <div class="invalid-feedback">
+                                        Please provide a valid Sex.
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <label for="state" class="text-gray-700 dark:text-gray-200">Seeking</label>
+                                      <select multiple="" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring js-example-basic-multiple select2-hidden-accessible" id="Seeking" required="" data-select2-id="select2-data-Seeking" tabindex="-1" aria-hidden="true">
+                                        <option value="Male" data-select2-id="select2-data-3-rd1w">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Binare">Couple</option>
+                                      </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-2-hzda" style="width: 305px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false"><ul class="select2-selection__rendered" id="select2-Seeking-container"><li class="select2-selection__choice" title="Male" data-select2-id="select2-data-4-s7pz"><button type="button" class="select2-selection__choice__remove" tabindex="-1" title="Remove item" aria-label="Remove item" aria-describedby="select2-Seeking-container-choice-1ps4-Male"><span aria-hidden="true">×</span></button><span class="select2-selection__choice__display" id="select2-Seeking-container-choice-1ps4-Male">Male</span></li></ul><span class="select2-search select2-search--inline"><textarea class="select2-search__field" type="search" tabindex="0" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" autocomplete="off" aria-label="Search" aria-describedby="select2-Seeking-container" placeholder="" style="width: 0.75em;"></textarea></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                      <div class="invalid-feedback">
+                                        Please provide a valid Seeking.
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <label for="state" class="text-gray-700 dark:text-gray-200">I am</label>
+                                      <select class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" id="state" required="">
+                                        <option value="single">Single</option>
+                                        <option value="Open Relationship">Open Relationship</option>
+                                        <option value="Widow">Widow</option>
+                                        <option value="Compromised">Compromised</option>
+                                        <option value="married">Married</option>
+                                        <option value="divorced">Divorced</option>
+                                      </select>
+                                      <div class="invalid-feedback">
+                                        Please provide a valid civil status.
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <label for="state" class="text-gray-700 dark:text-gray-200">Body type</label>
+                                      <select class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" id="Bodytype" required="">
+                                        <option value="Curvy">Curvy</option>
+                                        <option value="Slim">Slim</option>
+                                        <option value="Sport">Sport</option>
+                                        <option value="Weight">Weight</option>
+                                        <option value="Fit">Fit</option>
+                                      </select>
+                                      <div class="invalid-feedback">
+                                        Please provide a valid Body type.
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <label for="state" class="text-gray-700 dark:text-gray-200">Hair color</label>
+                                      <select class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" id="Haircolor" required="">
+                                        <option value="Black">Black</option>
+                                        <option value="Brown">Brown</option>
+                                        <option value="Blonde">Blonde</option>
+                                        <option value="LightBrown">Light Brown</option>
+                                        <option value="Red">Red</option>
+                                      </select>
+                                      <div class="invalid-feedback">
+                                        Please provide a valid Hair color.
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <label for="state" class="text-gray-700 dark:text-gray-200">Eye color</label>
+                                      <select class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" id="Eyecolor" required="">
+                                        <option value="Green">Green</option>
+                                        <option value="Black">Black</option>
+                                        <option value="Brown">Brown</option>
+                                        <option value="LightBrown">Light Brown</option>
+                                        <option value="Blue">Blue</option>
+                
+                                      </select>
+                                      <div class="invalid-feedback">
+                                        Please provide a valid Eye color.
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <label for="state" class="text-gray-700 dark:text-gray-200">Height</label>
+                                      <input required="" id="Height" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" type="number" min="1" max="500" value="160">
+                                      <div class="invalid-feedback">
+                                        Please provide a valid Height.
+                                      </div>
+                                    </div>
+              
+                                    <div>
+                                      <label for="state" class="text-gray-700 dark:text-gray-200">Weight</label>
+                                      <input required="" id="Weight" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" type="number" min="1" max="500" value="60">
+                                      <div class="invalid-feedback">
+                                        Please provide a valid Weight.
+                                      </div>
+                                    </div>
+              
+                                    <div>
+                                      <label for="state" class="text-gray-700 dark:text-gray-200">Smoker</label>
+                                      <select class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" id="Smoker" required="">
+                                        <option value="NonSmoker">Non Smoker</option>
+                                        <option value="Smoker">Smoker</option>
+                                        <option value="SocialSmoker">Social Smoker</option>
+                                      </select>
+                                      <div class="invalid-feedback">
+                                        Please provide a valid Smoker.
+                                      </div>
+                                    </div>
+                                    <div>
+                                      <label for="state" class="text-gray-700 dark:text-gray-200">Describe Yourself</label>
+                                      <textarea class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" id="Describe" rows="4"></textarea>
+                                    </div>
+  
+                              </div>
+                              <div class="col-12 col-lg-4  p-2 order-last">
+                                <br>
+                                <div class="card">
+                  
+                                  <div class="card-header">
+                                      Profile Picture
+                                  </div>
+                                  <div class="card-body">
+                                    <div id="img-preview" style="display: block;"><img src="https://firebasestorage.googleapis.com/v0/b/project-spcortana.appspot.com/o/user%2Fc8w0LFnGi7O6rByqK6BLfKlSydy1%2Fprofileimg?alt=media&amp;token=bfb75099-a93c-4962-9f93-eeb9ec3a71bf"></div>
+                                    <center>
+                                    <input type="file" accept="image/*" id="choose-file" name="choose-file">
+                                    <label for="choose-file">Choose File</label>
+                                    </center>
+                                  </div>
+                                </div>
+                                <div class="card">
+                  
+                                  <div class="card-header">
+                                      Pictures
+                                  </div>
+                                  <div class="card-body">
+                                    <div class="row">
+                                      <div id="img-previews0"></div>
+                                      <div id="img-previews1"></div>
+                                    </div>
+                                    <div class="row">
+                                      <div id="img-previews2"></div>
+                                      <div id="img-previews3"></div>
+                                    </div>
+                                    <div id="img-previews4"></div>
+                                    <center>
+                                      <input type="file" accept="image/*" id="choose-files" name="choose-files" multiple="mutliple">
+                                      <label for="choose-files">Choose Files</label>
+                                    </center>
+                                  </div>
+                                </div>
+                                <div class="card">
+                  
+                                  <div class="card-header">
+                                      Secret Pictures
+                                  </div>
+                                  <div class="card-body">
+                                    <div class="row">
+                                      <div id="img-previewsp0"></div>
+                                      <div id="img-previewsp1"></div>
+                                    </div>
+                                    <div id="img-previewsp2"></div>
+                                    <center>
+                                      <input type="file" accept="image/*" id="choose-filesp" name="choose-filesp" multiple="mutliple">
+                                      <label for="choose-filesp">Choose Files</label>
+                                    </center>
+                                  </div>
+                                </div>
+                              </div>
+  
+                          </form>
+                        </section>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <div class="row col-md-12 col-lg-12">
+                      <div class="col-md-4 col-lg-4">
+                        <div class="accordion" id="accordionExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  FOR
+                              </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Affair">
+                                  <label class="form-check-label" for="flexCheckDefault">
+                                    Affair
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Openrelationship">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Open relationship
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Hangingout">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Hanging out
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Couplerelationship">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Couple relationship
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Onerightstands">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    One right stands
+                                  </label>
+                                </div>
+          
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Friendship">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Friendship
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="GymSports">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Gym/Sports
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="ChatMails">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                      Chat/Mails
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Dinnerdate">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Dinner date
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Datingwithoutissues">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Dating without issues
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Travel">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Travel
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Otheractivites">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Other activites
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-lg-4">
+                        <div class="accordion" id="accordionExample2">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                YOUR PREFERENCES
+                              </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample2">
+                              <div class="accordion-body">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Cybersex">
+                                  <label class="form-check-label" for="flexCheckDefault">
+                                    Cybersex
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Livedating">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Live dating
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Bodyfetishist">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Body fetishist
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="ExhibitionismNaturism">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Exhibitionism/Naturism
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Straight">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Straight
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Coupleexchange">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Couple exchange
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Roleplays">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Roleplays
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="BDSM">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                      BDSM
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="ClothesToys">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Clothes/Toys
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="SexingroupsThreesomes">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Sex in groups/Threesomes
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Bisexual">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Bisexual
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Massages">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Massages
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Gastronomy">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Gastronomy
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Gamer">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Gamer
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Spirituality">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Spirituality
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Fashion">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Fashion
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Environmentalism">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Environmentalism
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Vegetarianism">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Vegetarianism
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Feminism">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Feminism
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Astrology">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Astrology
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Politics">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Politics
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="OutDoor">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    OutDoor
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Wine">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Wine
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="Animals">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Animals
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-lg-4">
+                        <div class="accordion" id="accordionExample3">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                  YOUR CHARACTER
+                              </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample3">
+                              <div class="accordion-body">
+                                <div class="form-check col-3">
+                                  <input class="form-check-input" type="checkbox" value="Open">
+                                  <label class="form-check-label" for="flexCheckDefault">
+                                    Open
+                                  </label>
+                                </div>
+                                <div class="form-check col-3">
+                                  <input class="form-check-input" type="checkbox" value="Flexible">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Flexible
+                                  </label>
+                                </div>
+                                <div class="form-check col-3">
+                                  <input class="form-check-input" type="checkbox" value="Strongnature">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Strong nature
+                                  </label>
+                                </div>
+                                <div class="form-check col-3">
+                                  <input class="form-check-input" type="checkbox" value="Loyal">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Loyal
+                                  </label>
+                                </div>
+                                <div class="form-check col-3">
+                                  <input class="form-check-input" type="checkbox" value="Funny">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Funny
+                                  </label>
+                                </div>
+                                <div class="form-check col-3">
+                                  <input class="form-check-input" type="checkbox" value="Selfconfident">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Self confident
+                                  </label>
+                                </div>
+                                <div class="form-check col-3">
+                                  <input class="form-check-input" type="checkbox" value="Compliant">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Compliant
+                                  </label>
+                                </div>
+                                <div class="form-check col-3">
+                                  <input class="form-check-input" type="checkbox" value="Loving">
+                                  <label class="form-check-label" for="flexCheckChecked">
+                                    Loving
+                                  </label>
+                                </div>
+                                <div class="form-check col-3">
+                                    <input class="form-check-input" type="checkbox" value="Curious">
+                                    <label class="form-check-label" for="flexCheckChecked">Curious</label>
+                                </div>
+                                <div class="form-check col-3">
+                                  <input class="form-check-input" type="checkbox" value="ActiveEntrepreneur">
+                                  <label class="form-check-label" for="flexCheckChecked">Active/Entrepreneur</label>
+                                </div>
+                             </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="view/assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="view/sing-up/RegisterProfilesF.js"></script>

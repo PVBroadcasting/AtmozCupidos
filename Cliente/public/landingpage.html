@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <title>1001-Citas</title>
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+
+  <!-- Bootstrap core CSS -->
+  <link href="view/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/mainstyles.css" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/mainstyles.css" />
+  <link href="view/sign-in/signin.css" rel="stylesheet">
+</head>
+
+<body class="text-center bg-pink-200">
+     <!-- Modal -->
+     <div class="modal fade" id="resetpasswordModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="mt-4">
+              <div class="flex items-center justify-between">
+                <h3 for="userreset" class="block text-lg text-gray-800 dark:text-gray-200">Email to reset password</h3>
+              </div>
+              <input type="email" id="Inp_email_userreset" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder="Email address" required autofocus="">  
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button onclick="sendEmailresetpassword()" type="button" class="btn btn-primary" data-bs-dismiss="modal">Send password reset email</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+  <div id="Loading"
+    style="display: none;position: absolute;top: 0%;left: 0%; width: 100%;height: 100%;background-color:rgba(1, 28, 60, 0.3);z-index:1001;opacity:0.9">
+    <div class="sk-chase"
+      style="position: fixed; left: 48%; top: 35%; z-index: 9999999999;display:block;opacity:1!important">
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+    </div>
+  </div>
+  <div class="w-full max-w-sm p-6 m-auto bg-white rounded-md shadow-md dark:bg-gray-800">
+    <h1 class="text-3xl font-semibold text-center text-gray-700 dark:text-white">1001-Citas</h1>
+
+    <div class="mt-6">
+      <div class="mt-4">
+        <div class="flex items-center justify-between">
+          <label for="username" class="block text-sm text-gray-800 dark:text-gray-200">Email</label>
+        </div>
+        <input type="email" id="Inp_email_user" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder="Email address" required autofocus="">
+
+      </div>
+
+      <div class="mt-4">
+        <div class="flex items-center justify-between">
+          <label for="password" class="block text-sm text-gray-800 dark:text-gray-200">Password</label>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#resetpasswordModal" class="text-xs text-gray-600 dark:text-gray-400 hover:underline">Forget Password?</a>
+        </div>
+
+        <input id="Inp_password_user" type="password"
+          class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+      </div>
+
+      <div class="mt-6">
+        <button onclick="login()"
+          class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
+          Login
+        </button>
+      </div>
+    </div>
+
+    <p class="mt-8 text-xs font-light text-center text-gray-400"> Don't have an account? <a href="sing-up.html"
+        class="font-medium text-gray-800 dark:text-gray-200 hover:underline">Create One</a></p>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="scripts/const_functions.js"></script>
+  <script src="scripts/firebaseconfig.js"></script>
+  <script src="scripts/httpmethods.js"></script>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="view/sign-in/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
+  <script>
+    $( document ).ready(function() {
+      document.getElementById("navsticky").style.display = "block"
+  });
+  </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+

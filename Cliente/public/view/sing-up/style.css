@@ -1,0 +1,181 @@
+
+
+[type="file"] {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+#img-preview {
+  display: none;
+  width: 100%;
+  height: 12em;
+  margin-bottom: 20px;
+}
+#img-preview img {
+  width: 100%;
+  height: 12em;
+  display: block;
+}
+
+.select2-container--default .select2-selection--multiple {
+  background-color: #A67777;
+}
+
+
+#img-previews1 {
+  display: none;
+  width:100%;
+  height: 8em;
+  margin-bottom: 20px;
+}
+#img-previews1 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#img-previews2 {
+  display: none;
+  width:100%;
+  height: 8em;
+  margin-bottom: 20px;
+}
+#img-previews2 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#img-previews3 {
+  display: none;
+  width: 100%;
+  height: 8em;
+
+  margin-bottom: 20px;
+}
+#img-previews3 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#img-previews4 {
+  display: none;
+  width: 100%;
+  height: 8em;
+  margin-bottom: 20px;
+}
+#img-previews4 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#img-previewsp0 {
+  display: none;
+  width: 100%;
+  height: 6100%;
+  border: 2px dashed #333;
+  margin-bottom: 20px;
+}
+#img-previewsp0 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#img-previewsp1 {
+  display: none;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed #333;
+  margin-bottom: 20px;
+}
+#img-previewsp1 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#img-previewsp2 {
+  display: none;
+  width:100%;
+  height: 100%;
+  border: 2px dashed #333;
+  margin-bottom: 20px;
+}
+#img-previewsp2 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.select2{
+width: 100%!important;
+}
+
+.text-white-50 { color: rgba(255, 255, 255, .5); }
+
+.bg-purple { background-color: #6f42c1; }
+.estoboxf::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.estoboxf::-webkit-scrollbar:vertical {
+  display: none;
+}
+
+.estoboxf::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+
+.estoboxf::-webkit-scrollbar:horizontal {
+  display: none;
+}
+
+.estoboxf::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+
+.estoboxf::-webkit-scrollbar-track {
+  border-radius: 10px;  
+}
+
+label.check {
+  background-color: #f1f2f3;
+  padding: 0.2em 1em;
+  border-radius: 2em;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox]:checked + label.check {
+  background-color: #A67777;
+  padding: 0.2em 1em;
+}
+
+
+
+#slider {
+  transition: .4s;
+}
+
+#slider::before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 18px;
+  top: 2px;
+  transition: .4s;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 1px rgba(0,0,0,0.15);
+}
+
+.checkboxpreferen:checked + #slider {
+  background: #DB7474;
+}
+
+.checkboxpreferen:checked + #slider:before {
+  transform: translateX(-16px);
+}

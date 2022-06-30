@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>PANEL</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/offcanvas/">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+    <link href="../../css/mainstyles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  </head>
+  <body class="bg-light">
+<nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background-color: #e3f2fd;" aria-label="Main navigation">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../dashboard/dashboard.html">PANEL</a>
+    <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="operadores" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse operadores-collapse" id="">
+      <ul id="menuaccess" class="navbar-nav me-auto mb-2 mb-lg-0">
+
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <div style="display: flex;">
+            <h5 class="row" id="totalmoneyconvertB"></h5>
+             <a href="#" style=" margin-right: 10px; margin-left: 50px;" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                 <i class="fas fa-user"></i>
+                 <strong id="userEmailsession"></strong>
+             </a>
+             <ul style="left:43%;" class="dropdown-menu">
+                 <li>
+                     <div class="navbar-login navbar-login-session">
+                         <div class="row">
+                             <div class="col-lg-12">
+                               <br>
+                                 <p>
+                                     <a onclick="signOut()" href="#" class="btn btn-danger btn-block col-12 p-2">Cerrar Sesion</a>
+                                 </p>
+                             </div>
+                         </div>
+                     </div>
+                 </li>
+             </ul>
+            </div>
+       </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="Loading" style="display: none;position: absolute;top: 0%;left: 0%; width: 100%;height: 100em;background-color:rgba(1, 28, 60, 0.2);z-index:1001;opacity:0.9">
+  <div class="sk-chase" style="position: fixed; left: 45%; top: 35%; z-index: 9999999999;display:block;opacity:1!important">
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+  </div>
+</div>
+    <main class="container">
+      <br>
+      <br>
+      <br>
+      <div class="row">
+
+        <div class="col-md-4 col-lg-4">
+   
+          <div class="card">
+
+            <div class="card-header">
+                Profile Codigo:<span id="codigo"></span>
+            </div>
+            <div class="card-body">
+              <form id="formregister" class="needs-validation" novalidate="">
+                <div class="row g-3">
+                  <div class="row g-2">
+                    <div class="col-sm-6">
+                      <label for="firstName" class="form-label">Nickname</label>
+                      <input type="text" class="form-control" id="Nickname" placeholder="" value="" required="">
+                      <div class="invalid-feedback">
+                        Valid Nickname is required.
+                      </div>
+                    </div>
+    
+                    <div class="col-sm-6">
+                      <label for="Name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="Name" placeholder="" value="" required="">
+                      <div class="invalid-feedback">
+                        Valid name is required.
+                      </div>
+                    </div>
+               
+                  </div>
+                  
+                  <div class="row g-2">
+                    <div class="col-md-4">
+                      <label for="state" class="form-label">Sex</label>
+                      <select class="form-select" id="Sex" required="">
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please provide a valid Sex.
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="state" class="form-label">Seeking</label>
+                      <select class="form-select" id="Seeking" required="">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Binare">Couple</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please provide a valid Seeking.
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="state" class="form-label">I am</label>
+                      <select class="form-select" id="state" required="">
+                        <option value="single">Single</option>
+                        <option value="Open Relationship">Open Relationship</option>
+                        <option value="Widow">Widow</option>
+                        <option value="Compromised">Compromised</option>
+                        <option value="married">Married</option>
+                        <option value="divorced">Divorced</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please provide a valid civil status.
+                      </div>
+                    </div>
+    
+                  </div>
+                  <div class="row g-2">
+                    <div class="col-md-4">
+                      <label for="state" class="form-label">Age</label>
+                      <input required="" class="form-control" id="Age" type="number" min="18" max="200" value="18">
+                      <div class="invalid-feedback">
+                        Please provide a valid Age.
+                      </div>
+                    </div>
+    
+                  </div>
+                  <div class="row g-2">
+                    <div class="col-sm-4">
+                      <label for="state" class="form-label">Country</label>
+                      <select class="form-select" id="Country" name="country">
+                       <option value="España">España</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Valid Country is required.
+                      </div>
+                    </div>
+    
+                    <div class="col-sm-4">
+                      <label for="lastName" class="form-label">Province</label>
+                      <select class="form-select" id="Region" name="region">
+               
+                    </select>
+                      <div class="invalid-feedback">
+                        Valid Province is required.
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <label for="lastName" class="form-label">City</label>
+                      <select class="form-select" id="City" name="City">
+    
+                    </select>
+                      <div class="invalid-feedback">
+                        Valid City is required.
+                      </div>
+                    </div>
+    
+                  </div>
+                    <div class="row g-2">
+                      <div class="col-sm-4">
+                        <label for="lastName" class="form-label">Languange</label>
+                        <select multiple="multiple" class="js-example-basic-multiple form-select " id="Languange" name="languange">
+                          <option value="EN">EN</option>
+                          <option value="SP">SP</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Valid Languange is required.
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="state" class="form-label">Body type</label>
+                        <select class="form-select" id="Bodytype" required="">
+                          <option value="Thin">Thin</option>
+                          <option value="Curvy">Curvy</option>
+                          <option value="Athletic">Athletic</option>
+                          <option value="Overweight">Overweight</option>
+                          <option value="Normal/Average">Normal/Average</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Please provide a valid Body type.
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="state" class="form-label">Hair color</label>
+                        <select class="form-select" id="Haircolor" required="">
+                          <option value="Blonde">Blonde</option>
+                          <option value="Black">Black</option>
+                          <option value="Brown">Brown</option>
+                          <option value="Gray">Gray</option>
+                          <option value="Bold">Bold</option>
+                          <option value="Red">Red</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Please provide a valid Hair color.
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="row g-2">
+                      <div class="col-md-4">
+                        <label for="state" class="form-label">Eye color</label>
+                        <select class="form-select" id="Eyecolor" required="">
+                          <option value="Blue">Blue</option>
+                          <option value="Green">Green</option>
+                          <option value="Gray">Gray</option>
+                          <option value="Dark">Dark</option>
+                          <option value="Brown">Brown</option>
+                          <option value="Hazel">Hazel</option>
+                          
+    
+                        </select>
+                        <div class="invalid-feedback">
+                          Please provide a valid Eye color.
+                        </div>
+                      </div>
+                        <div class="col-md-4">
+                          <label for="state" class="form-label">Height</label>
+                          <input required="" id="Height" class="form-control" type="number" min="1" max="500" value="160">
+                          <div class="invalid-feedback">
+                            Please provide a valid Height.
+                          </div>
+                        </div>
+    
+                        <div class="col-md-4">
+                          <label for="state" class="form-label">Weight</label>
+                          <input required="" id="Weight" class="form-control" type="number" min="1" max="500" value="60">
+                          <div class="invalid-feedback">
+                            Please provide a valid Weight.
+                          </div>
+                        </div>
+    
+
+                  </div>
+                  <div class="row g-2">
+                      <div class="col-md-4">
+                        <label for="state" class="form-label">Smoker</label>
+                        <select class="form-select" id="Smoker" required="">
+                          <option value="Smoker">Smoker</option>
+                          <option value="NonSmoker">Non Smoker</option>
+              
+                          <option value="SocialSmoker">Social Smoker</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Please provide a valid Smoker.
+                        </div>
+                      </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-12 g-3">
+                    <div class="col-12 g-2">
+                      <label for="state" class="form-label">Describe Yourself</label>
+                      <textarea class="form-control" id="Describe" rows="4"></textarea>
+                    </div>
+    
+                    </div>
+                  </div>
+                </div>
+                <br>
+    
+              </form>
+          </div>
+        </div>
+
+        </div>
+        <div class="row col-md-8 col-lg-8 order-md-last">
+          <div class="col-md-5 col-lg-5">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Looking for
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Affair" >
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Affair
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Openrelationship">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Open relationship
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Hangingout">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Hanging out
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Couplerelationship">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Couple relationship
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Onerightstands">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        One Night stands
+                      </label>
+                    </div>
+
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Friendship">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Friendship
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="GymSports">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Sports
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="ChatMails">
+                      <label class="form-check-label" for="flexCheckChecked">
+                          Chat/Mails
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Dinnerdate">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Dinner date
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Datingwithoutissues">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Casual Dates
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Travel">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Travel
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Otheractivites">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Other activites
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    YOUR PREFERENCES
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Cybersex" >
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Cyber Sex
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Livedating">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Live dating
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="BodyFetichist">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Body Fetichist
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Straight">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Heterosexual/Straight
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Coupleexchange">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Couple Exchange
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Roleplays">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Roleplays
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="BDSM">
+                      <label class="form-check-label" for="flexCheckChecked">
+                          BDSM
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="ClothesToys">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Clothes/Toys
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="SexingroupsThreesomes">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Gang Bang
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Bisexual">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Bisexual
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Massages">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Massages
+                      </label>
+                    </div>
+
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Naked">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Naked
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="Dressed">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Dressed
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      YOUR CHARACTER
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <div class="form-check col-3">
+                      <input class="form-check-input" type="checkbox" value="Open" >
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Open
+                      </label>
+                    </div>
+                    <div class="form-check col-3">
+                      <input class="form-check-input" type="checkbox" value="Flexible">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Flexible
+                      </label>
+                    </div>
+                    <div class="form-check col-3">
+                      <input class="form-check-input" type="checkbox" value="Strongnature">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Strong nature
+                      </label>
+                    </div>
+                    <div class="form-check col-3">
+                      <input class="form-check-input" type="checkbox" value="Loyal">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Loyal
+                      </label>
+                    </div>
+                    <div class="form-check col-3">
+                      <input class="form-check-input" type="checkbox" value="Funny">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Funny
+                      </label>
+                    </div>
+                    <div class="form-check col-3">
+                      <input class="form-check-input" type="checkbox" value="Selfconfident">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Self confident
+                      </label>
+                    </div>
+                    <div class="form-check col-3">
+                      <input class="form-check-input" type="checkbox" value="Active">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Active
+                      </label>
+                    </div>
+                    <div class="form-check col-3">
+                      <input class="form-check-input" type="checkbox" value="Loving">
+                      <label class="form-check-label" for="flexCheckChecked">
+                        Loving
+                      </label>
+                    </div>
+                    <div class="form-check col-3">
+                        <input class="form-check-input" type="checkbox" value="Curious">
+                        <label class="form-check-label" for="flexCheckChecked">Curious</label>
+                    </div>
+                    <div class="form-check col-3">
+                      <input class="form-check-input" type="checkbox" value="Dominant">
+                      <label class="form-check-label" for="flexCheckChecked">Dominant</label>
+                    </div>
+                    <div class="form-check col-3">
+                      <input class="form-check-input" type="checkbox" value="Romantic">
+                      <label class="form-check-label" for="flexCheckChecked">Romantic</label>
+                    </div>
+                    <div class="form-check col-3">
+                      <input class="form-check-input" type="checkbox" value="Sensible">
+                      <label class="form-check-label" for="flexCheckChecked">Sensible</label>
+                    </div>
+                    <div class="form-check col-3">
+                      <input class="form-check-input" type="checkbox" value="Shy">
+                      <label class="form-check-label" for="flexCheckChecked">Shy</label>
+                    </div>
+                    <div class="form-check col-3">
+                      <input class="form-check-input" type="checkbox" value="Jealous">
+                      <label class="form-check-label" for="flexCheckChecked">Jealous</label>
+                    </div>
+                    <div class="form-check col-3">
+                      <input class="form-check-input" type="checkbox" value="Virgous">
+                      <label class="form-check-label" for="flexCheckChecked">Virgous</label>
+                    </div>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7 col-lg-7">
+            <br>
+            <div class="card">
+
+              <div class="card-header">
+                  Profile Picture
+              </div>
+              <div class="card-body">
+                <div id="img-preview"></div>
+                <center>
+                <input type="file" accept="image/*" id="choose-file" name="choose-file" />
+                <label for="choose-file">Choose File</label>
+                </center>
+              </div>
+            </div>
+            <div class="card">
+
+              <div class="card-header">
+                  Pictures
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div id="img-previews0"></div>
+                  <div id="img-previews1"></div>
+                </div>
+                <div class="row">
+                  <div id="img-previews2"></div>
+                  <div id="img-previews3"></div>
+                </div>
+                <div id="img-previews4"></div>
+                <center>
+                  <input type="file" accept="image/*" id="choose-files" name="choose-files" multiple="mutliple">
+                  <label for="choose-files">Choose Files</label>
+                </center>
+              </div>
+            </div>
+            <div class="card">
+
+              <div class="card-header">
+                  Secret Pictures
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div id="img-previewsp0"></div>
+                  <div id="img-previewsp1"></div>
+                </div>
+                <div id="img-previewsp2"></div>
+                <center>
+                  <input type="file" accept="image/*" id="choose-filesp" name="choose-filesp" multiple="mutliple">
+                  <label for="choose-filesp">Choose Files</label>
+                </center>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button style="display:none" id="btnEdit"  class="w-100 btn btn-dark btn-lg" >Save</button>
+      <button style="display:none" id="btnRegister" class="w-100 btn btn-dark btn-lg" >Save</button>
+      <br>
+      <br>
+    </main>
+    <script src="../../scripts/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../scripts/const_functions.js"></script>
+    <script src="../../scripts/firebaseconfig.js"></script>
+    <script type="module" src="../../scripts/Operadores/firebasedatabaseOperadoresCRUD.js"></script>
+    <script src="RegisterProfilesF.js"></script>
+  </body>
+</html>

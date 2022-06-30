@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <title>Atmoz Cupido</title>
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+
+  <!-- Bootstrap core CSS -->
+  <link href="view/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/mainstyles.css" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/mainstyles.css" />
+  <link href="view/sign-in/signin.css" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+</head>
+
+<body class="text-center bg-pink-200" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/project-spcortana.appspot.com/o/global%2Ffondonews.PNG?alt=media&token=ceefd91f-7d18-476f-b27d-32e26c5e0e8d')!important;">
+     <!-- Modal -->
+     <div class="modal fade" id="resetpasswordModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="mt-4">
+              <div class="flex items-center justify-between">
+                <h3 for="userreset" class="block text-lg text-gray-800 dark:text-gray-200">Email to reset password</h3>
+              </div>
+              <input type="email" id="Inp_email_userreset" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder="Email address" required autofocus="">  
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button onclick="sendEmailresetpassword()" type="button" class="btn btn-primary" data-bs-dismiss="modal">Send password reset email</button>
+          </div>
+          
+        </div>
+      </div>
+    </div> 
+  <div id="Loading"
+    style="display: none;position: absolute;top: 0%;left: 0%; width: 100%;height: 100%;background-color:rgba(1, 28, 60, 0.3);z-index:1001;opacity:0.9">
+    <div class="sk-chase"
+      style="position: fixed; left: 48%; top: 35%; z-index: 9999999999;display:block;opacity:1!important">
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+      <div class="sk-chase-dot"></div>
+    </div>
+  </div>
+  <div class="w-80 p-6 absolute right-24 bg-white opacity-80 rounded-lg shadow-md dark:bg-gray-800">
+    <div class="mt-6">
+      <div class="mt-4">
+        <input type="email" id="Inp_email_user" class="block w-full px-4 py-3 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder="Correo Electrónico" required autofocus="">
+
+      </div>
+
+      <div class="mt-4">
+        <input id="Inp_password_user" type="password"
+          class="block w-full px-4 py-3 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"  placeholder="Contraseña">
+
+        </div>
+
+      <div class="my-3">
+        <button style="background:#98696D" onclick="login()" class="w-full px-4 py-3 tracking-wide font-bold  text-gray-200 transition-colors duration-200 transform rounded-md focus:outline-none">
+          Iniciar sesión
+        </button>
+      </div>
+      <a href="#" data-bs-toggle="modal" data-bs-target="#resetpasswordModal" class="text-md text-gray-500 font-bold   hover:underline">¿Olvidaste tu contraseña?</a>
+      <div class="flex items-center justify-between mt-4">
+        <span class="w-100 border-b dark:border-gray-600"></span>
+    </div>
+    <br>
+    <div class="flex items-center mt-6 -mx-2">
+      <button style="background-color: #4C5BC0;" id="registerwithgoogle" type="button"
+          class="flex items-center justify-center w-full px-6 py-3 mx-2 text-sm font-medium text-white transition-colors duration-200 transform  rounded-md  focus:outline-none">
+          <svg class="w-4 h-4 mx-2 fill-current" viewBox="0 0 24 24">
+              <path
+                  d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z">
+              </path>
+          </svg>
+
+          <span class="hidden mx-2 sm:inline">Entrar  con Google</span>
+      </button>
+    </div>
+    <br>
+
+    </div>
+    <a href="sing-up.html">
+    <button style="background:#C9A4AC" class="w- px-4 py-3 tracking-wide font-bold text-gray-500 transition-colors duration-200 transform  rounded-md  focus:outline-none">
+     Crear Cuenta
+    </button>
+  </a>
+
+  </div>
+  
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="scripts/const_functions.js"></script>
+  <script src="scripts/firebaseconfig.js"></script>
+  <script src="scripts/httpmethods.js"></script>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="view/sign-in/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
